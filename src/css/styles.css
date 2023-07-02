@@ -3,7 +3,7 @@
 @import url('./reset.css');
 
 /*header*/
-@import url('');
+@import url('./header.css');
 
 /*main */
 /*Hero */
@@ -16,7 +16,7 @@
 @import url('');
 
 /* Vegetables */
-@import url('');
+@import url('./vegetables.css');
 
 /* We will call you */
 @import url('');
