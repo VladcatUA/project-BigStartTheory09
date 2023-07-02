@@ -75,8 +75,8 @@
 }
 
 .form-item-check {
-    width: 20px;
-    height: 20px;
+    width: 22px;
+    height: 22px;
     margin-bottom: 10px;
     margin-left: auto;
     border: 1.5px solid var(--green);
@@ -84,12 +84,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.form-check {
-    padding: 0;
-    width: 20px;
-    height: 20px;
 }
 
 .check-label {
@@ -106,8 +100,6 @@
 .form-check:checked + .check-label > .check-icon {
     fill: var(--green);
 }
-
-
 
 .form-item-primary {
     padding-left: 6px;
