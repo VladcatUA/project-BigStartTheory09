@@ -1,13 +1,10 @@
-
-
-
 /* footer */
 .footer-veggieboost {
     background-color: var(--light-green);
-    padding: 80px 20px;
-
+    padding: 80px 0px;
     flex-shrink: 0;
 }
+
 /* 
 .footer-veggieboost-container {
     margin: 0 auto;
@@ -46,11 +43,13 @@
     align-items: center;
     justify-content: center;
 }
+
 .footer-logo-icon {
     padding: auto auto;
 }
 
-.footer-logo-link:hover .footer-logo-icon, .footer-logo-link:focus .footer-logo-icon {
+.footer-logo-link:hover .footer-logo-icon,
+.footer-logo-link:focus .footer-logo-icon {
     fill: var(--main-color-logo);
 }
 
@@ -60,22 +59,23 @@
     color: var(--black);
 
     font-size: 14px;
-font-family: DM Sans;
-font-style: normal;
-text-align: center;
-font-weight: 700;
-line-height: 1.28;
-letter-spacing: -0.56px;
-text-transform: uppercase;
+    font-family: DM Sans;
+    font-style: normal;
+    text-align: center;
+    font-weight: 700;
+    line-height: 1.28;
+    letter-spacing: -0.56px;
+    text-transform: uppercase;
 }
 
-.list-footer { list-style: none;
+.list-footer {
+    list-style: none;
 }
 
 .list-footer-logo {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start ;
+    justify-content: flex-start;
 
     gap: 20px;
 
@@ -84,8 +84,9 @@ text-transform: uppercase;
     padding-left: 0;
     /* max-width: 241px; */
 
-    
+
 }
+
 /* .footer-logo-nav-list {
     display: flex;
 } */
@@ -95,13 +96,13 @@ text-transform: uppercase;
     /* display: flex; */
 
     color: var(--black);
-text-align: center;
-font-size: 14px;
-font-family: DM Sans;
-font-style: normal;
-font-weight: 400;
-line-height: 1.28;
-letter-spacing: -0.56px;
+    text-align: center;
+    font-size: 14px;
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.28;
+    letter-spacing: -0.56px;
 
 }
 
@@ -129,12 +130,12 @@ letter-spacing: -0.56px;
 }
 
 .list-icon-social-media {
-width: 40px;
-height: 40px;
+    width: 40px;
+    height: 40px;
 
     display: flex;
-       align-items: center;
-       justify-content: center;
+    align-items: center;
+    justify-content: center;
     gap: 8px;
 
 }
@@ -142,15 +143,15 @@ height: 40px;
 .footer-social-list-link {
     width: 100%;
     height: 100%;
-display: flex;
-justify-content: center;
-align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 
-border-radius: 10px;
-border: 1px solid var(--black);
-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    
+    border-radius: 10px;
+    border: 1px solid var(--black);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .footer-social-media-icon {
@@ -158,18 +159,20 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
-.footer-social-list-link:hover, .footer-social-list-link:focus {
-    border-color: var(--green);}
+.footer-social-list-link:hover,
+.footer-social-list-link:focus {
+    border-color: var(--green);
+}
 
 .footer-social-list-link:hover .footer-social-media-icon,
-.footer-social-list-link:focus .footer-social-media-icon
- {    fill: var(--green);
-    }
+.footer-social-list-link:focus .footer-social-media-icon {
+    fill: var(--green);
+}
 
 /* 3 ----- footer contact detailes */
 .footer-veggieboost-contact-detailes {
     padding-top: 40px;
-margin: 0 auto;
+    margin: 0 auto;
 
     display: flex;
     flex-direction: column;
@@ -178,6 +181,7 @@ margin: 0 auto;
 
     gap: 20px;
 }
+
 .footer-contact-detailes-link {
     color: var(--black);
 
@@ -189,19 +193,20 @@ margin: 0 auto;
     font-style: normal;
     font-weight: 400;
     line-height: 1.28;
-    text-transform: uppercase;}
+    text-transform: uppercase;
+}
 
 .footer-contact-detailes-text {
-width: 135px;
+    width: 135px;
 
     margin: 0 auto;
-    color: var(--black); 
+    color: var(--black);
 
     text-align: center;
-font-size: 14px;
-/* font-family: DM Sans; */
-font-style: normal;
-font-weight: 400;
-line-height: 1.28; 
-letter-spacing: -0.28px;
+    font-size: 14px;
+    /* font-family: DM Sans; */
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.28;
+    letter-spacing: -0.28px;
 }
