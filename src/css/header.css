@@ -10,6 +10,9 @@
   justify-content: space-between;
   padding-top: 13px;
   padding-bottom: 13px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
 }
 
 .header-menu-list {
@@ -49,6 +52,11 @@
   background-color: transparent;
   padding: 0;
   line-height: 0;
+}
+
+.icon-basket {
+  width: 20px;
+  height: 20px;
 }
 
 @media screen and (min-width: 375px) {
@@ -127,5 +135,10 @@
   .header-navigations {
     margin-right: 76px;
     gap: 308px;
+  }
+
+  .icon-basket {
+    width: 24px;
+    height: 24px;
   }
 }
