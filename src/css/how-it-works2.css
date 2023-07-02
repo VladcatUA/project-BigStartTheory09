@@ -1,0 +1,83 @@
+:root {
+    --black: #141414;
+    --green: #a1c487;
+    --light-green: #eaf7e5;
+    --orange: #fc8a11;
+    --light-orange: #faf3e7;
+    --gray: #f3f3f3;
+}
+
+.easy-steps {
+    width: 1216px;
+    background-color: var(--light-orange);
+    border-radius: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 110px;
+    background-image: url(/img/ellipse.png);
+}
+
+.img-girl {
+    display: flex;
+    width: 434px;
+    height: 420px;
+}
+
+.easy-text {
+    width: 512px;
+}
+
+.paragraf-easy-steps {
+    color: var(--black);
+    text-shadow: 0px 4px 70px 0px rgba(0, 0, 0, 0.10);
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.easy-steps-list {
+    padding: 0 0 4px 46px;
+    list-style: none;
+    overflow: hidden;
+    counter-reset: numList;
+}
+
+.easy-steps-link {
+    margin-right: 44px;
+    float: left;
+    position: relative;
+}
+
+.easy-steps-link:not(:last-child) { 
+    margin-bottom: 20px;  
+ }
+
+.easy-steps-link:before {
+    counter-increment: numList;
+    content: counter(numList);
+    float: left;
+    position: absolute;
+    left: -46px;
+    text-align: center;
+    color: var(--black);
+    line-height: 44px;
+    width: 46px;
+    height: 44px;
+    background: var(--green);
+    border-radius: 200px
+}
+
+.easy-steps-link-par {
+    width: 289px;
+    height: 44px;
+    padding-left: 20px;
+    font-size: 14px;
+    font-weight: 400;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+
