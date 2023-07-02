@@ -32,13 +32,12 @@
 .img-footer {
     width: 100%;
     border-radius: 100px;
-    margin-bottom: 20px;
 }
 
 .footer-logo-link {
     text-decoration: none;
     height: 18px;
-
+    margin-top: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
