@@ -1,5 +1,5 @@
-<section class="connect-container">
-    <div>
+<section class="connect-section container">
+    <div class="connect-box">
     <div class="connect-first-part">
         <h1 class="connect-title">Fresh Harvest Box has got you covered</h1>
         <p class="connect-text">Our boxes are packed with delicious, nutritious vegetables, perfect for anyone looking to eat healthier or support local
@@ -11,9 +11,22 @@
         </form>
     </div>
     <div class="connect-picture">
-     <img class="connect-foto" srcset="/src/img/mobile/we-will-call-you/woman-mob.png 1x,
-    ./src/img/mobile/we-will-call-you/woman-mob@2x.png 2x"
-    src="/src/img/mobile/we-will-call-you/woman-mob.png" alt="Woman" width="335">
+       <picture>
+            <source srcset="../img/desktop/we-will-call-you/woman-desk.png 1x,
+            ../img/desktop/we-will-call-you/woman-desk@2x.png 2x"
+            media="(min-width: 1200px)"/>
+
+            <source srcset="../img/tablet/we-will-call-you/woman-tab.png 1x,
+            ../img/tablet/we-will-call-you/woman-tab@2x 2x"
+             media="(min-width: 768px)"/>
+
+            <source srcset="../img/mobile/we-will-call-you/woman-mob.png 1x, 
+            ../img/mobile/we-will-call-you/woman-mob@2x.png 2x"
+                media="(max-width: 767px)"/>
+
+            <img class="connect-foto" src="../img/mobile/we-will-call-you/woman-mob.png"
+                alt="Woman" width="335">
+        </picture>
     </div>
     </div>
 </section>

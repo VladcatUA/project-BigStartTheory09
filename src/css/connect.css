@@ -2,22 +2,123 @@
 @import url('./variable-style.css');
 @import url('./reset.css');
 
+@font-face {
+    font-family: DM Sans-500;
+    src: url(../fonts-style/dm-sans-v13-latin-500.woff2);
+}
+
+@font-face {
+    font-family: DM Sans-500-italic;
+    src: url(../fonts-style/dm-sans-v13-latin-500italic.woff2);
+}
+
+@font-face {
+    font-family: DM Sans-700;
+    src: url(../fonts-style/dm-sans-v13-latin-700.woff2);
+}
+
+@font-face {
+    font-family: DM Sans-regular;
+    src: url(../fonts-style/dm-sans-v13-latin-regular.woff2);
+}
+
+.connect-section{
+    max-width: 375px;
+}
+
+.connect-box {
+    max-width: 375px;
+}
+
+.connect-first-part {
+    margin-bottom: 40px;
+}
+
+.connect-title {
+    color: var(--black);
+    text-align: center;
+    text-shadow: 0px 4px 70px 0px rgba(0, 0, 0, 0.10); 
+    font-size: 24px;
+    font-family: DM Sans-500;
+    font-style: normal;
+    line-height: 28px;
+    letter-spacing: -0.96px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.connect-text {
+    width: 321px;
+    color: var(--black);
+    text-align: center;
+    text-shadow: 0px 4px 70px 0px rgba(0, 0, 0, 0.10);
+    font-size: 14px;
+    font-family: DM Sans-regular;
+    font-style: normal;
+    line-height: 18px;
+    letter-spacing: -0.56px;
+    margin-bottom: 40px;
+}
+
+.connect-form {
+    display: flex;
+    max-width: 100%;
+}
+
+.connect-input {
+    display: flex;
+    position: relative;
+    width: 335px;
+    height: 48px;
+    padding-left: 24px;
+    border: 1px solid #C1BDBD;
+    border-radius: 100px;
+    background-color: transparent;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    color: var(--black);
+    font-size: 14px;
+    font-family: DM Sans-regular;
+    font-style: normal;
+    line-height: 18px;
+    letter-spacing: -0.56px;
+}
 
 
-.connect-container {}
+.connect-btn {
+    display: inline-flex;
+    padding: 15px 35px;
+    align-items: center;
+    position: absolute;
+    margin-left: 222px;
+    gap: 15px;
+    border: none;
+    border-radius: 100px;
+    color: var(--basic-background-color);
+    background: var(--orange);
 
-.connect-first-part {}
+}
 
-.connect-title {}
-
-.connect-text {}
-
-.connect-form {}
-
-.connect-input {}
-
-.connect-btn {}
-
-.connect-picture {}
+.connect-picture {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 335px;
+    height: 388px;
+    border-radius: 40px;
+    background-color: var(--old-lace);
+    background-image:  url(/img/ellipse.png);
+}
 
 .connect-foto {}
+
+@media screen and (min-width: 375px) {
+    max-width: 335px;
+}
+
+@media screen and (min-width: 768px) {
+    width: 768px;
+}
+
+@media screen and (min-width: 1280px) {
+    width: 1280px;
+}
