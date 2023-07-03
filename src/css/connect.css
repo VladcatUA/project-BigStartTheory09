@@ -1,35 +1,8 @@
-@import url('./fonts.css');
-@import url('./variable-style.css');
-@import url('./reset.css');
-
-@font-face {
-    font-family: DM Sans-500;
-    src: url(../fonts-style/dm-sans-v13-latin-500.woff2);
-}
-
-@font-face {
-    font-family: DM Sans-500-italic;
-    src: url(../fonts-style/dm-sans-v13-latin-500italic.woff2);
-}
-
-.connect-container {}
-
-@font-face {
-    font-family: DM Sans-700;
-    src: url(../fonts-style/dm-sans-v13-latin-700.woff2);
-}
-
-.connect-first-part {}
-
-@font-face {
-    font-family: DM Sans-regular;
-    src: url(../fonts-style/dm-sans-v13-latin-regular.woff2);
-}
-
 .connect-title {}
 
 .connect-section {
     max-width: 375px;
+    margin-top: 40px;
 }
 
 .connect-text {}
@@ -42,34 +15,38 @@
 
 .connect-first-part {
     margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .connect-input {}
 
 .connect-title {
     color: var(--black);
-    text-align: center;
-    text-shadow: 0px 4px 70px 0px rgba(0, 0, 0, 0.10);
+    text-shadow: 0px 4px 70px rgba(0, 0, 0, 0.10);
     font-size: 24px;
-    font-family: DM Sans-500;
     font-style: normal;
-    line-height: 28px;
+    font-weight: 500;
+    line-height: 1.17;
     letter-spacing: -0.96px;
     text-transform: uppercase;
     margin-bottom: 20px;
+    justify-content: center;
+    text-align: center;
+    align: center;
 }
 
 .connect-btn {}
 
 .connect-text {
-    width: 321px;
     color: var(--black);
     text-align: center;
-    text-shadow: 0px 4px 70px 0px rgba(0, 0, 0, 0.10);
+    text-shadow: 0px 4px 70px rgba(0, 0, 0, 0.10);
     font-size: 14px;
-    font-family: DM Sans-regular;
+    font-weight: 400;
     font-style: normal;
-    line-height: 18px;
+    line-height: 1.29;
     letter-spacing: -0.56px;
     margin-bottom: 40px;
 }
@@ -90,12 +67,13 @@
     height: 48px;
     padding-left: 24px;
     border: 1px solid #C1BDBD;
+    color: #C1BDBD;
     border-radius: 100px;
     background-color: transparent;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     color: var(--black);
     font-size: 14px;
-    font-family: DM Sans-regular;
+    font-weight: 400;
     font-style: normal;
     line-height: 18px;
     letter-spacing: -0.56px;
@@ -107,13 +85,18 @@
     padding: 15px 35px;
     align-items: center;
     position: absolute;
-    margin-left: 222px;
+    margin-left: 230px;
     gap: 15px;
     border: none;
     border-radius: 100px;
     color: var(--basic-background-color);
     background: var(--orange);
-
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.29;
+    letter-spacing: -0.56px;
+    text-transform: capitalize;
 }
 
 .connect-picture {
@@ -125,18 +108,7 @@
     border-radius: 40px;
     background-color: var(--old-lace);
     background-image: url(/img/ellipse.png);
+    margin-bottom: 80px;
 }
 
 .connect-foto {}
-
-@media screen and (min-width: 375px) {
-    max-width: 335px;
-}
-
-@media screen and (min-width: 768px) {
-    width: 768px;
-}
-
-@media screen and (min-width: 1280px) {
-    width: 1280px;
-}
