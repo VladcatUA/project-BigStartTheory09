@@ -1,11 +1,6 @@
-.container {
-    width: 100%;
-}
+/*.hero-wrap-main {}
 
-.hero-wrap-main {}
-
-
-.hero-wrap-secondary {}
+.hero-wrap-secondary {}*/
 
 .hero {
     padding-top: 48px;
@@ -216,13 +211,4 @@
     border-color: var(--basic-background-color);
     color: var(--black);
     background-color: var(--floral-white-hashtag);
-}
-
-
-
-
-@media screen and (min-width: 375px) {
-    .container {
-        max-width: 375px;
-    }
 }
