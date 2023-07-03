@@ -1,0 +1,114 @@
+.connect-title {}
+
+.connect-section {
+    max-width: 375px;
+    margin-top: 40px;
+}
+
+.connect-text {}
+
+.connect-box {
+    max-width: 375px;
+}
+
+.connect-form {}
+
+.connect-first-part {
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.connect-input {}
+
+.connect-title {
+    color: var(--black);
+    text-shadow: 0px 4px 70px rgba(0, 0, 0, 0.10);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.17;
+    letter-spacing: -0.96px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    justify-content: center;
+    text-align: center;
+    align: center;
+}
+
+.connect-btn {}
+
+.connect-text {
+    color: var(--black);
+    text-align: center;
+    text-shadow: 0px 4px 70px rgba(0, 0, 0, 0.10);
+    font-size: 14px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.29;
+    letter-spacing: -0.56px;
+    margin-bottom: 40px;
+}
+
+.connect-picture {}
+
+.connect-form {
+    display: flex;
+    max-width: 100%;
+}
+
+.connect-foto {}
+
+.connect-input {
+    display: flex;
+    position: relative;
+    width: 335px;
+    height: 48px;
+    padding-left: 24px;
+    border: 1px solid #C1BDBD;
+    color: #C1BDBD;
+    border-radius: 100px;
+    background-color: transparent;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    color: var(--black);
+    font-size: 14px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 18px;
+    letter-spacing: -0.56px;
+}
+
+
+.connect-btn {
+    display: inline-flex;
+    padding: 15px 35px;
+    align-items: center;
+    position: absolute;
+    margin-left: 230px;
+    gap: 15px;
+    border: none;
+    border-radius: 100px;
+    color: var(--basic-background-color);
+    background: var(--orange);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.29;
+    letter-spacing: -0.56px;
+    text-transform: capitalize;
+}
+
+.connect-picture {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 335px;
+    height: 388px;
+    border-radius: 40px;
+    background-color: var(--old-lace);
+    background-image: url(/img/ellipse.png);
+    margin-bottom: 80px;
+}
+
+.connect-foto {}
