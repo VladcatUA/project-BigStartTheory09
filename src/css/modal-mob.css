@@ -42,6 +42,9 @@
   display: flex;
   justify-content: center;
 }
+.close-icon {
+  stroke: #77ac63;
+}
 /* .is-hidden {
   visibility: hidden;
   opacity: 0;
