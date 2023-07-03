@@ -18,14 +18,11 @@
   flex-direction: column;
   gap: 16px;
 }
-.close-icon {
-  /* fill: #a1c487; */
-}
+
 .modal-close {
   display: flex;
   align-items: center;
   justify-content: center;
-
   background: #fff;
   margin-left: auto;
   border: none;
