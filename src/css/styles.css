@@ -3,29 +3,29 @@
 @import url('./reset.css');
 
 /*header*/
-@import url('');
+@import url('./header.css');
 
 /*main */
 /*Hero */
-@import url('');
+@import url('./hero.css');
 
 /* How it works part 1 */
 @import url('how-it-works-first.css');
 
 /* How it works part 2 */
-@import url('');
+@import url('how-it-works-second.css');
 
 /* Vegetables */
-@import url('');
+@import url('./vegetables.css');
 
 /* We will call you */
-@import url('');
+@import url('./connect.css');
 
 /* Footer */
-@import url('');
+@import url('./footer.css');
 
 /* Modal - Your order */
-@import url('');
+@import url('./modal-order-mobile.css');
 
 /* Modal - Mobile menu */
-@import url('');
+@import url('./mob-modal-menu.css');
