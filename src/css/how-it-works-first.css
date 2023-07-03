@@ -26,7 +26,45 @@
     margin-top: 20px;
     display: block;
 }
-
+/* --------desktop------ */
+@media only screen and (min-width: 1280px) {
+    .how-it-works-first {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 124px;
+        gap: 119px;
+        row-gap: 40px;
+    }
+    .how-it-works-first-title {
+        width: 687px;
+        padding-right: 73px;
+        font-weight: 500;
+        font-size: 48px;
+        line-height: 1;
+        letter-spacing: -1.92px;
+        margin-bottom: 0;
+    }
+    .how-it-works-first-image {
+        width: 410px;
+        height: 170px;
+    }
+    .how-it-works-first-list {
+        display: flex;
+        width: 687px;
+        align-items: flex-start;
+        gap: 40px;
+        margin-top: 0;
+    }
+    .how-it-works-first-link {
+        max-width: 353px;
+    }
+    .how-it-works-first-text {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1.3;
+        letter-spacing: -0.72px;
+    }
+}
 /* -----tablet------- */
 @media only screen and (min-width: 768px) and (max-width: 1279px) {
     .how-it-works-first {
