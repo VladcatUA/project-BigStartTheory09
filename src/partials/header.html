@@ -18,15 +18,20 @@
             <span class="header-text">veggieboost</span>
             </a>
         </nav>
-        <button type="button" class="header-mob-menu-burger">
-          <svg width="24" height="24" class="header-burger js-open-menu">
-            <use href="./img/iconss.svg#burger"></use>
-          </svg>
-        </button>        
+        <div class="burger-open-container" js-menu-container>
+          <button type="button" class="header-mob-menu-burger" js-open-menu>
+            <svg width="24" height="24" class="header-burger">
+              <use href="./img/iconss.svg#burger"></use>
+            </svg>
+          </button>   
+        </div>
+
         <button type="button" class="header-basket-btn" data-modal-open>
           <svg class="icon-basket" >
             <use href="./img/shopping-cartt.svg#shopping-cart"></use>
           </svg>
         </button>
       </div>
+      <script src="../modal-menu.js"></script>
+      <script src="../modal.js"></script>
     </header>
