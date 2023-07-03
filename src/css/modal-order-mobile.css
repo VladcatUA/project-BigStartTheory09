@@ -45,13 +45,10 @@
 
 .form-list {
     margin-bottom: 40px;
-}
-
-.list {
-    display: flex;
     flex-direction: column;
     gap: 12px;
 }
+
 
 .form-item {
     position: relative;
