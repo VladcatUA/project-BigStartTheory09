@@ -19,7 +19,11 @@
     src: url(../fonts-style/dm-sans-v13-latin-700.woff2);
 }
 
-.connect-first-part {}
+.connect-first-part {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
 @font-face {
     font-family: DM Sans-regular;
@@ -134,7 +138,32 @@
 }
 
 @media screen and (min-width: 768px) {
-    width: 768px;
+    /* width: 768px; */
+
+    .connect-container {}
+    
+        .connect-section {
+            max-width: 768px;
+        }
+    
+        .connect-box {
+            max-width: 768px;
+        }
+    
+        .connect-first-part {
+            margin-bottom: 40px;
+        }
+    
+        .connect-title {
+            width: 524px;
+            font-size: 40px;
+        }
+    
+        .connect-text {}
+    
+        .connect-picture {}
+    
+        .connect-foto {}
 }
 
 @media screen and (min-width: 1280px) {
