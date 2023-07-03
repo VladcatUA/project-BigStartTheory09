@@ -1,7 +1,3 @@
-.container {
-    width: 100%;
-}
-
 .hero-wrap-main {}
 
 
@@ -216,13 +212,4 @@
     border-color: var(--basic-background-color);
     color: var(--black);
     background-color: var(--floral-white-hashtag);
-}
-
-
-
-
-@media screen and (min-width: 375px) {
-    .container {
-        max-width: 375px;
-    }
 }
