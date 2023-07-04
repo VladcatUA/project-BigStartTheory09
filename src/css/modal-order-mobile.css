@@ -16,7 +16,6 @@
 .backdrop.is-hidden .modal {
     transform: translate(-50%, -50%) scale(0.9);
     ;
-    /*transform: scale(0);*/
 }
 
 .modal {
