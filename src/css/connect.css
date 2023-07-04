@@ -1,17 +1,11 @@
-.connect-title {}
-
 .connect-section {
     max-width: 375px;
-    margin-top: 40px;
+    padding-top: 40px;
 }
-
-.connect-text {}
 
 .connect-box {
     max-width: 375px;
 }
-
-.connect-form {}
 
 .connect-first-part {
     margin-bottom: 40px;
@@ -20,11 +14,9 @@
     justify-content: center;
 }
 
-.connect-input {}
-
 .connect-title {
     color: var(--black);
-    text-shadow: 0px 4px 70px rgba(0, 0, 0, 0.10);
+    text-shadow: 0px 4px 70px 0px rgba(0, 0, 0, 0.10);
     font-size: 24px;
     font-style: normal;
     font-weight: 500;
@@ -34,31 +26,28 @@
     margin-bottom: 20px;
     justify-content: center;
     text-align: center;
-    align: center;
+    /* align: center;*/
 }
-
-.connect-btn {}
 
 .connect-text {
     color: var(--black);
     text-align: center;
-    text-shadow: 0px 4px 70px rgba(0, 0, 0, 0.10);
+    text-shadow: 0px 4px 70px 0px rgba(0, 0, 0, 0.10);
     font-size: 14px;
     font-weight: 400;
     font-style: normal;
     line-height: 1.29;
     letter-spacing: -0.56px;
     margin-bottom: 40px;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
 }
-
-.connect-picture {}
 
 .connect-form {
     display: flex;
     max-width: 100%;
 }
-
-.connect-foto {}
 
 .connect-input {
     display: flex;
@@ -78,7 +67,6 @@
     line-height: 18px;
     letter-spacing: -0.56px;
 }
-
 
 .connect-btn {
     display: inline-flex;
@@ -112,3 +100,119 @@
 }
 
 .connect-foto {}
+
+@media screen and (min-width: 375px) {}
+
+@media screen and (min-width: 768px) {
+
+    .connect-section {
+        max-width: 768px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top: 60px;
+    }
+
+    .connect-box {
+        max-width: 768px;
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .connect-first-part {
+        margin-bottom: 80px;
+        /* justify-content: center;*/
+    }
+
+    .connect-title {
+        width: 524px;
+        font-size: 40px;
+        letter-spacing: -1.6px;
+        line-height: 1.1;
+    }
+
+    .connect-text {
+        width: 499px;
+        font-size: 18px;
+        line-height: 1.33;
+        letter-spacing: -0.72px;
+        margin-bottom: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .connect-form {
+        display: flex;
+        justify-content: center;
+    }
+
+    .connect-input {
+        width: 350px;
+    }
+
+    .connect-btn {
+        margin-left: 245px;
+    }
+
+    .connect-picture {
+        width: 704px;
+        height: 463px;
+        border-radius: 80px;
+        margin-bottom: 173px;
+    }
+
+    .connect-foto {}
+}
+
+@media screen and (min-width: 1280px) {
+
+    .connect-section {
+        max-width: 1280px;
+    }
+
+    .connect-box {
+        max-width: 1216px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .connect-first-part {
+        width: 614px;
+        height: 340px;
+        margin-left: 0;
+
+
+    }
+
+    .connect-title {
+        font-size: 48px;
+        line-height: 1;
+        letter-spacing: -1.92px;
+        margin-bottom: 40px;
+        margin-left: 0;
+    }
+
+    .connect-text {
+        width: 523px;
+        margin-bottom: 80px;
+        margin-left: 0;
+    }
+
+    .connect-form {}
+
+    .connect-input {}
+
+    .connect-btn {}
+
+    .connect-picture {
+        width: 525px;
+        height: 536px;
+    }
+
+    .connect-foto {}
+
+}
