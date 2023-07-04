@@ -26,6 +26,8 @@
 
 /* Modal - Your order */
 @import url('./modal-order-mobile.css');
+@import url('./modal-your-order-desktop.css');
+
 
 /* Modal - Mobile menu */
 @import url('./mob-modal-menu.css');
