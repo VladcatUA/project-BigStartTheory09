@@ -53,9 +53,6 @@
     align-items: center;
 }
 
-/*.easy-steps-link:not(:last-child) { 
-    margin-bottom: 20px;  
- }*/
 
 .easy-steps-link:before {
     counter-increment: numList;
@@ -77,8 +74,6 @@
 }
 
 .easy-steps-link-par {
-    /* width: 289px;
-    height: 44px;*/
     padding-left: 20px;
     font-family: 'DM Sans';
     text-shadow: 0px 4px 70px rgba(0, 0, 0, 0.10);
@@ -157,7 +152,6 @@ screen and (min-resolution: 2dppx) and (max-width: 767px) {
         display: flex;
         align-items: center;
         font-size: 14px;
-        /* margin-bottom: 24px;*/
         max-width: 275px;
     }
 
@@ -222,7 +216,6 @@ screen and (min-resolution: 2dppx) and (max-width: 767px) {
         display: flex;
         align-items: center;
         font-size: 14px;
-        /* margin-bottom: 24px;*/
         max-width: 275px;
     }
 
@@ -281,7 +274,6 @@ screen and (min-resolution: 2dppx) and (min-width: 768px) {
 
     .paragraf-easy-steps {
         font-size: 28px;
-        /* margin: auto;*/
     }
 
     .easy-steps-list {
@@ -290,7 +282,6 @@ screen and (min-resolution: 2dppx) and (min-width: 768px) {
 
     .easy-steps-link {
         width: 100%;
-        /*margin-bottom: 20px;*/
         height: 44px;
     }
 
@@ -306,5 +297,55 @@ screen and (min-resolution: 2dppx) and (min-width: 768px) {
         width: 46px;
         height: 44px;
         padding: 10px 0;
+    }
+}
+/* media query for screen sizes from 1280px */
+
+@media screen and (min-device-pixel-ratio: 1) and (min-width: 1280px),
+screen and (min-resolution: 96dpi) and (min-width: 1280px),
+screen and (min-resolution: 1dppx) and (min-width: 1280px) {
+    .easy-steps {
+        background-image: url(../img/ellipse.png);
+}
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 1280px),
+screen and (min-resolution: 192dpi) and (min-width: 1280px),
+screen and (min-resolution: 2dppx) and (min-width: 1280px) {
+    .easy-steps {
+        background-image: url(../img/ellipse@2x.png);
+    }
+}
+@media screen and (min-width:1280px){
+    .easy-steps {
+        width: 1216px;
+        border-radius: 80px;
+        gap: 110px;
+        background-image: url(/img/ellipse.png);
+    }
+    
+    .img-girl {
+        width: 434px;
+        height: 420px;
+    }
+    
+    .easy-text {
+        width: 512px;
+    }
+    
+    .paragraf-easy-steps {
+        font-size: 40px;
+        font-weight: 500;
+        margin-bottom: 44px; 
+    }
+    .easy-steps-link{
+        align-items: center;
+    }
+    .easy-steps-link-par {
+        width: 299px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.1;
+        padding-top: 5px;
     }
 }
