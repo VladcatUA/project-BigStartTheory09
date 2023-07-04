@@ -4,47 +4,116 @@
       <ul class="list hero-images-list">
         <li>
           <div class="hero-img-circle">
-            <img
-              class="hero-img-height"
-              srcset="
-                ./img/mobile/hero/hero-ellipse-mob.png    1x,
-                ./img/mobile/hero/hero-ellipse-mob@2x.png 2x
-              "
-              src="./img/mobile/hero/hero-ellipse-mob.png"
-              alt="pic 1"
-              width="40px"
-              height="40px"
-            />
+            <picture class="hero-img-absolute">
+              <source
+                srcset="
+                  ./img/desktop/hero/hero-ellipse-desk.png    1x,
+                  ./img/desktop/hero/hero-ellipse-desk@2x.png 2x
+                "
+                media="(min-width=1280px)"
+              />
+              <source
+                srcset="
+                  ./img/tablet/hero/hero-ellipse-tab.png    1x,
+                  ./img/tablet/hero/hero-ellipse-tab@2x.png 2x
+                "
+                media="(min-width=768px)"
+              />
+              <source
+                srcset="
+                  ./img/mobile/hero/hero-ellipse-mob.png    1x,
+                  ./img/mobile/hero/hero-ellipse-mob@2x.png 2x
+                "
+                media="(max-width=767px)"
+              />
+              <img
+                srcset="
+                  ./img/desktop/hero/hero-ellipse-desk.png    1x,
+                  ./img/desktop/hero/hero-ellipse-desk@2x.png 2x
+                "
+                class="hero-img-height"
+                src="./img/desktop/hero/hero-ellipse-desk.png"
+                alt="pic 3"
+                width="40px"
+                height="40px"
+              />
+            </picture>
           </div>
         </li>
         <li class="hero-position-second">
           <div class="hero-img-circle">
-            <img
-              class="hero-img-height"
-              srcset="
-                ./img/mobile/hero/hero-ellipse2-mob.png    1x,
-                ./img/mobile/hero/hero-ellipse2-mob@2x.png 2x
-              "
-              src="./img/mobile/hero/hero-ellipse2-mob.png"
-              alt="pic 2"
-              width="40px"
-              height="40px"
-            />
+            <picture class="hero-img-absolute">
+              <source
+                srcset="
+                  ./img/desktop/hero/hero-ellipse2-desk.png    1x,
+                  ./img/desktop/hero/hero-ellipse2-desk@2x.png 2x
+                "
+                media="(min-width=1280px)"
+              />
+              <source
+                srcset="
+                  ./img/tablet/hero/hero-ellipse2-tab.png    1x,
+                  ./img/tablet/hero/hero-ellipse2-tab@2x.png 2x
+                "
+                media="(min-width=768px)"
+              />
+              <source
+                srcset="
+                  ./img/mobile/hero/hero-ellipse2-mob.png    1x,
+                  ./img/mobile/hero/hero-ellipse2-mob@2x.png 2x
+                "
+                media="(max-width=767px)"
+              />
+              <img
+                srcset="
+                  ./img/desktop/hero/hero-ellipse2-desk.png    1x,
+                  ./img/desktop/hero/hero-ellipse2-desk@2x.png 2x
+                "
+                class="hero-img-height"
+                src="./img/desktop/hero/hero-ellipse2-desk.png"
+                alt="pic 3"
+                width="40px"
+                height="40px"
+              />
+            </picture>
           </div>
         </li>
         <li class="hero-position-third">
           <div class="hero-img-circle">
-            <img
-              class="hero-img-height"
-              srcset="
-                ./img/mobile/hero/hero-ellipse3-mob.png    1x,
-                ./img/mobile/hero/hero-ellipse3-mob@2x.png 2x
-              "
-              src="./img/mobile/hero/hero-ellipse3-mob.png"
-              alt="pic 3"
-              width="40px"
-              height="40px"
-            />
+            <picture class="hero-img-absolute">
+              <source
+                srcset="
+                  ./img/desktop/hero/hero-ellipse3-desk.png    1x,
+                  ./img/desktop/hero/hero-ellipse3-desk@2x.png 2x
+                "
+                media="(min-width=1280px)"
+              />
+              <source
+                srcset="
+                  ./img/tablet/hero/hero-ellipse3-tab.png    1x,
+                  ./img/tablet/hero/hero-ellipse3-tab@2x.png 2x
+                "
+                media="(min-width=768px)"
+              />
+              <source
+                srcset="
+                  ./img/mobile/hero/hero-ellipse3-mob.png    1x,
+                  ./img/mobile/hero/hero-ellipse3-mob@2x.png 2x
+                "
+                media="(max-width=767px)"
+              />
+              <img
+                srcset="
+                  ./img/desktop/hero/hero-ellipse3-desk.png    1x,
+                  ./img/desktop/hero/hero-ellipse3-desk@2x.png 2x
+                "
+                class="hero-img-height"
+                src="./img/desktop/hero/hero-ellipse3-desk.png"
+                alt="pic 3"
+                width="40px"
+                height="40px"
+              />
+            </picture>
           </div>
         </li>
         <li class="hero-position-fourth">
@@ -71,10 +140,10 @@
         </button>
       </div>
     </div>
+
     <div class="hero-wrap-secondary">
       <picture class="hero-picture">
         <source
-          type="image/png"
           srcset="
             ./img/desktop/hero/hero-image-desk.png    1x,
             ./img/desktop/hero/hero-image-desk@2x.png 2x
@@ -95,24 +164,14 @@
           "
           media="(max-width=767px)"
         />
-        <!-- <img
-          class="hero-main-img"
-          src="./img/mobile/hero/hero-image-mob.png"
-          alt="women/vegetables"
-          width="278px"
-          height="228px"
-        /> -->
-
         <img
-          class="hero-main-img"
           srcset="
-            ./img/mobile/hero/hero-image-mob.png    1x,
-            ./img/mobile/hero/hero-image-mob@2x.png 2x
+            ./img/desktop/hero/hero-image-desk.png    1x,
+            ./img/desktop/hero/hero-image-desk@2x.png 2x
           "
-          src="./img/mobile/hero/hero-image-mob@2x.png"
-          alt="pic 3"
-          width="278px"
-          height="228px"
+          class="hero-main-img"
+          src="./img/desktop/hero/hero-image-desk.png"
+          alt="Girl with vegetable"
         />
       </picture>
 
