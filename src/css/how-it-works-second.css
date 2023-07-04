@@ -230,3 +230,67 @@ screen and (min-resolution: 2dppx) and (max-width: 767px) {
         padding: 7px 0 7px 0;
     }
 }
+    
+/* media query for screen sizes from 768px */
+@media screen and (min-device-pixel-ratio: 1) and (min-width: 768px),
+screen and (min-resolution: 96dpi) and (min-width: 768px),
+screen and (min-resolution: 1dppx) and (min-width: 768px) {
+    .easy-steps {
+        background-image: url(../img/ellipse.png);
+}
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
+screen and (min-resolution: 192dpi) and (min-width: 768px),
+screen and (min-resolution: 2dppx) and (min-width: 768px) {
+    .easy-steps {
+        background-image: url(../img/ellipse@2x.png);
+    }
+}
+@media screen and (min-width: 768px){
+    .easy-steps {
+        width: 704px;
+        border-radius: 80px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        background-image: url(/img/ellipse.png);
+
+    }
+    .img-girl {
+        margin-top: 40px;
+        width: 350px;
+        height: 446px;
+    }
+    .easy-text {
+        width: 275px;
+    }
+    .paragraf-easy-steps {
+        font-size: 28px;
+        margin: auto;
+    }
+    .easy-steps-list{
+        width: 100%;
+    }
+    .easy-steps-link {
+        width: 100%;
+        margin-bottom: 20px;
+        height: 44px;
+    }
+    .easy-steps-link-par {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.1;
+        width: 186px;
+        padding-left: 14px;
+    }
+    .easy-steps-link:before {
+        width: 46px;
+        height: 44px;
+        padding: 10px 0;
+    }
+}
+
+
