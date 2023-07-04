@@ -13,8 +13,7 @@
       referrerpolicy="no-referrer"
     />
     
-    <script type="module" crossorigin src="/project-BigStartTheory09/assets/index-a87f5e88.js"></script>
-    <link rel="stylesheet" href="/project-BigStartTheory09/assets/index-a4d9c6e5.css">
+    <link rel="stylesheet" href="/project-BigStartTheory09/assets/index-f11ff506.css">
   </head>
 
   <body>
@@ -39,8 +38,8 @@
             <span class="header-text">veggieboost</span>
             </a>
         </nav>
-        <button type="button" class="header-mob-menu-burger" js-open-menu>
-          <svg width="24" height="24" class="header-burger" >
+        <button type="button" class="header-mob-menu-burger js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg width="24" height="24" class="header-burger" aria-label="Перемикач мобільного меню">
             <use href="/project-BigStartTheory09/assets/iconss-6c14b7d6.svg#burger"></use>
           </svg>
         </button>        
@@ -51,7 +50,7 @@
         </button>
       </div>
     </header>
-    
+
     <!-- main  -->
     <main>
       <!-- Hero -->
@@ -114,7 +113,7 @@
       </p>
 
       <div class="hero-btn-main">
-        <button type="button" class="hero-button-shop" data-modal-open>
+        <button type="button" class="hero-button-shop" data-modal-open-2>
           SHOP NOW
         </button>
       </div>
@@ -493,7 +492,7 @@
         </div>
       </li>
     </ul>
-    <button type="button" class="organic-button" data-modal-open>
+    <button type="button" class="organic-button" data-modal-open-1>
       <svg class="organic-icon" width="14" height="14">
         <use href="/project-BigStartTheory09/assets/iconss-6c14b7d6.svg#Vector"></use>
       </svg>
@@ -853,7 +852,7 @@
 
 
     <!-- Modal - Mobile menu -->
-    <div class="container-mobmenu js-menu-container" id="modal-menu">
+    <div class="container-mobmenu js-menu-container" id="mobile-menu">
     <div class="modal-mob is-hidden" data-modal>
       <div class="header-mobile-box header">
         <nav class="header-navigations">
@@ -865,14 +864,13 @@
         </nav>
         
          <div class="heder-btn">
-            <button type="button" class="modal-close" js-close-menu>
+            <button type="button" class="modal-close js-close-menu">
                 <svg class="close-icon" width="24" height="24">
                     <use href="/project-BigStartTheory09/assets/iconss-6c14b7d6.svg#close-btn-x"></use>
                 </svg>
             </button>
         </div>
       </div>
-
 
         <ul class="modal-mob-list list">
             <li class="modal-mob-items"><a class="modal-mob-link link" href="">How It Works</a></li>
@@ -885,9 +883,10 @@
         </ul>
     </div>
 </div>
-<script src="../modal.js"></script>
 
-    
+
+    <!-- <script type="module" src="/main.js"></script> -->
+    <script src="./modal-menu.js"></script>
     <script src="./modal.js"></script>
   </body>
 </html>
