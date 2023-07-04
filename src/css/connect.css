@@ -1,6 +1,6 @@
 .connect-section {
     max-width: 375px;
-    margin-top: 40px;
+    padding-top: 40px;
 }
 
 .connect-box {
@@ -26,7 +26,7 @@
     margin-bottom: 20px;
     justify-content: center;
     text-align: center;
-    align: center;
+    /* align: center;*/
 }
 
 .connect-text {
@@ -39,6 +39,9 @@
     line-height: 1.29;
     letter-spacing: -0.56px;
     margin-bottom: 40px;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .connect-form {
@@ -98,18 +101,19 @@
 
 .connect-foto {}
 
- @media screen and (min-width: 375px) {}
+@media screen and (min-width: 375px) {}
 
- @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
 
     .connect-section {
         max-width: 768px;
-        display: inline-flex;
+        display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        padding-top: 60px;
     }
-    
+
     .connect-box {
         max-width: 768px;
         display: inline-flex;
@@ -120,6 +124,7 @@
 
     .connect-first-part {
         margin-bottom: 80px;
+        /* justify-content: center;*/
     }
 
     .connect-title {
@@ -130,18 +135,19 @@
     }
 
     .connect-text {
-    width: 499px;
-    font-size: 18px;
-    line-height: 1.33;
-    letter-spacing: -0.72px;
-    margin-bottom: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+        width: 499px;
+        font-size: 18px;
+        line-height: 1.33;
+        letter-spacing: -0.72px;
+        margin-bottom: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     .connect-form {
-       
+        display: flex;
+        justify-content: center;
     }
 
     .connect-input {
@@ -160,13 +166,14 @@
     }
 
     .connect-foto {}
- }
+}
 
- @media screen and (min-width: 1280px) {
+@media screen and (min-width: 1280px) {
 
     .connect-section {
         max-width: 1280px;
     }
+
     .connect-box {
         max-width: 1216px;
         display: flex;
@@ -177,8 +184,8 @@
         width: 614px;
         height: 340px;
         margin-left: 0;
-        
-    
+
+
     }
 
     .connect-title {
@@ -207,5 +214,5 @@
     }
 
     .connect-foto {}
-        
- }
+
+}
