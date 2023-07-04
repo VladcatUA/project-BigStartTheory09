@@ -101,7 +101,19 @@
 
 .connect-foto {}
 
-@media screen and (min-width: 375px) {}
+@media screen and (max-width: 374px) {
+    .connect-input {
+        width: 280px;
+    }
+
+    .connect-picture {
+        width: 280px;
+    }
+
+    .connect-btn {
+        margin-left: 175px;
+    }
+}
 
 @media screen and (min-width: 768px) {
 
