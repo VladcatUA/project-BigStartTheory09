@@ -58,14 +58,21 @@
     border: 1px solid #C1BDBD;
     color: #C1BDBD;
     border-radius: 100px;
+    outline: transparent;
     background-color: transparent;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));*/
     color: var(--black);
     font-size: 14px;
     font-weight: 400;
     font-style: normal;
     line-height: 18px;
     letter-spacing: -0.56px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.connect-input:hover,
+.connect-input:focus {
+    border-color: var(--orange);
 }
 
 .connect-btn {
@@ -167,7 +174,7 @@
     }
 
     .connect-btn {
-        margin-left: 245px;
+        margin-left: 250px;
     }
 
     .connect-picture {
