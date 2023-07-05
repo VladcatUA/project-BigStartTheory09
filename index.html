@@ -2,84 +2,899 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vanilla-app-template/favicon.svg" />
+    <link rel="icon" type="image/svg" href="/project-BigStartTheory09/assets/favicon-12a869fe.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+    <title>Veggieboost</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+      integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     
-    <script type="module" crossorigin src="/vanilla-app-template/assets/index-c45ada6b.js"></script>
-    <link rel="stylesheet" href="/vanilla-app-template/assets/index-10c40100.css">
+    <script type="module" crossorigin src="/project-BigStartTheory09/assets/index-3ba2bae7.js"></script>
+    <link rel="stylesheet" href="/project-BigStartTheory09/assets/index-e64c3990.css">
   </head>
+
   <body>
+    <!-- header -->
     <header class="header">
-  <nav class="nav">
-    <ul class="nav-list">
-      <li class="nav-item">
-        <a href="./page-2.html" class="nav-link">Page 2</a>
-      </li>
+      <div class="header-box">
+        <nav class="header-navigations">
+          <ul class="list header-menu-list">
+            <li class="header-nav-list">
+              <a href="#how-it-works" class="header-menu-item link">How It Work</a>
+            </li>
+            <li class="header-nav-list">
+              <a href="#vegetables" class="header-menu-item link">Vegetables</a>
+            </li>
+            <li class="header-nav-list">
+              <a href="#footer" class="header-menu-item link">Contacts</a>
+            </li>
+          </ul>
+          <a href="../index.html" class="header-logo-nav link">
+            <svg width="16" height="16" class="header-logo">
+            <use href="/project-BigStartTheory09/assets/iconss-6c14b7d6.svg#logo"></use>
+            <span class="header-text">veggieboost</span>
+            </a>
+        </nav>
+        <button type="button" class="header-mob-menu-burger js-open-menu">
+          <svg width="24" height="24" class="header-burger">
+            <use href="/project-BigStartTheory09/assets/iconss-6c14b7d6.svg#burger"></use>
+          </svg>
+        </button>        
+        <button type="button" class="header-basket-btn" data-modal-open>
+          <svg class="icon-basket" >
+            <use href="/project-BigStartTheory09/assets/shopping-cartt-d9d9b6a8.svg#shopping-cart"></use>
+          </svg>
+        </button>
+      </div>
+    </header>     
 
-      <li class="nav-item">
-        <a href="./page-3.html" class="nav-link">Page 3</a>
-      </li>
-    </ul>
-  </nav>
-</header>
-
-
-    <section>
-      <h1>Lorem ipsum dolor sit amet.</h1>
-      <!-- Path to images as from index.html file -->
-      <img src="/vanilla-app-template/assets/javascript-8dac5379.svg" alt="" />
-    </section>
-
-    <!-- Loads the specified .html file -->
-    <section class="vite-promo">
-  <div class="container">
-    <div class="wrapper">
-      <h2 class="title">
-        <span class="gradient">Vite</span>
-      </h2>
-      <p class="text">Next Generation Frontend Tooling</p>
-      <p class="tagline">
-        Get ready for a development environment that can finally catch up with
-        you.
-      </p>
-
-      <ul class="actions">
-        <li class="action">
-          <a
-            class="link"
-            href="https://vitejs.dev/guide/"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Get Started</a
-          >
+    <!-- main  -->
+    <main>
+      <!-- Hero -->
+      <section class="hero">
+  <div class="container hero-container">
+    <div class="hero-wrap-main">
+      <ul class="list hero-images-list">
+        <li>
+          <div class="hero-img-circle">
+            <img
+              class="hero-img-height"
+              srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAAABGdBTUEAALGPC/xhBQAAAwBQTFRFAAAAv4+AEhIWX0xAxpeK1a+nJygmxZSFBAQD5sGtg2lYyqKXEREXCAgQxZWG1bGrpm1GwopkGBgeg08qxp6UUSwXr4yEFBQYw5OCzqWd2quM7dLF0amjb1tXoXthExIXIiAqzaWexZWE1bGqz5+fDxARiW9qSUBECgkHzqmNdkkpxpiGFRUZGxogl2E72LOuxZeHtYVjz6igckAc0KehQjkxy5+XExMYz5h1GRMPQSMOHBwi0Kmgx6KSqXxe0qukxqKd3bGW17WyICAgHRkWk21U1bCn7sTD0J+Dr456zqypzaScUkI0x5eHlXp60KWd7NnQx5qOFBMXLSMexpaFx5iKxZaF16+v45aUy6GXyrOpDg4R0XdvQjMphWJNJxgNSExRzKCV27quDAwOyJuO47ma2LWxxZF0pnFKdGNc1rGruZaPHRwiOjo8fVY9z5+AooV2wZyY17Ox68q1EQkDmWVQIBIKkHNtERAP17OrNS8sEBAg1bOtx5mLhWliExIVIB4kISIkGBcczaOaIR8lyp6Si1FAExIXW01OYTke7dbLCAYG16eRFhgYpHJZxZWDFBQa0aqjCwsO5sS0sntUz6+fGRkeDAsMm15C2rGifGRdKyUsv5eA58i5xpaFyp6V2Law2KybnGlDtYZtJCMr47yqGBAYGhkex5aE4rqlxZeJuZV/ICAwvYtuz6mh2bWx8+HZMS4ytY6AtHxbzKGWyJyOr5qOjXV1FBQZ1LCq0aihYEMuc0Qo8tjMrXZRy6SY68292bWxz5+Pi3Nl3bKbIhoXKiMihVQ0y6CSwpJ9noKBHRYV0KukEg4LOj9C0KegmXhq6cW0y5l8x5+HKRYJcGFheFpRnmM9EhIW8t3SiVg4yZuNjWpU1auVuoZkXFZSICAlx5Bq2qySGRkftZBxZFBFNjE21qWG68zAEA8T1K+oqYZ78NTGMSgnSzo1GBggyJ2SQEJB3r+1rXJZzKSbyZqMuJKHt52Po1xEclpUrZSDWkAznGpLpm9Kx5+PlXhqgvnBRgAAAQB0Uk5TABCA/7/f/3D///+/3yCPz///3/////9AQO///5D//6/vcO/vEP//z///////7///n///////QGD///+Ar///////YBD///////////8g////YL//35//IP+A/////////9//kP//kP//////////EP+Q/////////0D/EID///9w//+v////z/////////+A7++g//8QkP//////IP/Pz9///////yD/r////xD/QJ///////9///3CwgP////+P//8Q//////+f////cP//3////yD/////oP//j/////+Q//+///////////////9Aj////8/P//////////8g/wj+MlIAAAAJcEhZcwAACxMAAAsTAQCanBgAAAOnSURBVHjaddV9fAt3HAfwm41ePRRbN7SerVZ6ZOI8lHHt0I2MG6W1ZZ5bpc5TW2yI33pSNJHRhYWWzVMXbvNQTUfRaiat56IeU1rUQ5t6GMbMsO33+91DkpZP8kder3vn8/3d5e4XwjvNfbaObB8V1f7HrSuaE6/NGyugQQnBGfnhulczP1EJISGCoEMRhFFDazsfsU0QQnRSYmJ0upzhNZ2fIChVMVJS4DvlgReb+ZYgt2AAX0p++t0DPlF6UrxiQ2ngdpeVYTj+pxfd2R0jKpSDshuOiVJ24TiY3mPg/HR/m0ZKO9GdzXFPtNlSbpFG09XPBtYrPi8xlm3xPoZHvFb0jCSNyVNvFWaNL16EGQ3TErl/FYPy10mSHLe/9aAxD4uTi/xZzBiGRpVHbJ5JJ5NS83uHZ5bVn28CHUUGsw/CCV5wjDH1YtNKx3rD50+LTt6nZZlGED1lIq48cu47Ta4HxCYanIZZoFAuZJgdxBeQyIzV2EJTS/uXOLb5BjoN4ZGhaoyqYU4QizVKWJYVxpXOuDK2W0XF4N++zHyzUHZMdS7x2NOxune7dn5+etWn4dn/VBUcmiHVwdQlWkgKO9Z2IH97XFS52fe7//rd/aVEgfEdCLlMjaH6RbZjvaNpoNPX7HQGrMUsHofAQC2FVW/OX26OK8/LOxO4K68A98VLMI2m1R7xbxJXfjH7TFXvKmfgI+giIkTZgThFi1Lympf5ndf8udEQXploxquLEAsbEx/RtHT9Rbl51eElRzPXzglInCidB4xKlUu0U9Nq6fLj4jtdp/z91ehPtsX6KstTQbiQ2EG7fydEI7tviisz5yXGamSoQvmGgGfDMG74Hnmue7ajqiC2U8dqN1NtgHfPPsYj0wpJMqnP4W436xcti6+WmUq1E8LVbqaZB29blOCvTVxWGO5LgMxuj0a3eEuJhU0NNWJmNFosQdyW28dQYUKC3W7fiZ+Z1Wl4aKvjluBgi9EYbEEBer0+43wYdBBuiBYfwxNMWKsirVaLgFbr0gZpgwDPW2Eylg1DhR/LD/bsey4XAC6XCzLgAhQFGcfBTs5qzdozZLJ7qxgB4FGAdBCg0GfKylk5Pcdx8BsfeOw9C5ZqKR6gMoAZmsuhTs7K3/jVaz+bRElGDFoimq3nfqi5QfZqCE8BIytl4ikJtv229pbb6HsAiwDgKcpEQclDeG3AK3fxny+9DacjzqPpXfoOeP0fQ7M6bZau5KmVDdvs/cP7yP8uv0CUSHfONwAAAABJRU5ErkJggg== 1x, data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAMAAAC5zwKfAAAABGdBTUEAALGPC/xhBQAAAwBQTFRFAAAARUpPCAgMv4+Ax5iK0aqkORsL58CiEBAUyZ6TiWxXxJWCFBMY37OUEBATvIhhiFItGRgfUCMSnIGBrouCzaWcx5eH79G917SvBAQC2aqNy5t6FhQa1bGrx5+XIyIpMy0xzaSdmGhGd0wsDQ0RbTwbrHlYFREO0aqjz6eghGRV0amk0p59uZiS1K+p7tvSFRUaHx4j2LSuGRccXT0rwKmcxJSDxaOgzH9uzqSe1Ma/0ayecl1ZCggGqIqERDUt3a2Y0qukvqKXJyEd6J6bzqOZ1G5lvpyMzaScq4JojzsytGNOw5OCJhQL0KWdxJJyDw4RJxsU472qlFM0YExFICAgKissNCki5LuchWxoDw8Uz6+vz6mhqXBGbFRIoX1oxZySyZuPHRwiEg0J0aqkv5OHmmM9SD4917Sxx5mLx5mJ17OuxpZ9FhYc79XJHyAlNzg65cOyupKEkH509OLc5JOUxpeH1bGlDxAS5se5vYVkHBkW1rGr17Svu4tv1qSKXDYd17Wvz5+fIB4lCQYF17ytzqWdBwkIGxcUoV1EFhcc1rOtEBATyp6SGBccEhIVHx8k0ZZ/UTw0e1lC77e8sntW0ZqVa0MpiFs+YFZTxpmLCwsMmmVE3b6xIyIp6s3CRi4i2aOTpG5Lnn90xZWEfGVn6aWiy5VxxZeJ7MizxpiGFxgckHRpHx8oyJuOlW5Uz5+ISCUSuY16q4V6klw237Oc2bayIyEpBwcIz6ihFxUcxZWFx5eFsnRSy6GWu4FbxYxrNTU3z6+fzKGTxZSF8t3T58OsIiAnoIR9IyMoGhkdJB0c06GDuZSMxpWEoWFUfGJYhVQ168u717Ou8NnNFBMX47uk7tPEx5iLHQ4FQkRDjXV02qyTWUM4xYpj37WiKyQg0Kih17OrOz9Cp0ZCyKGJGBQa1a+tWi0NExUZzJ2FUElEOywjq3NNKSUrx5qL0KehTTgveFxMd0Qh2bWxFBMYo2tDeE87IiIl0aulz6mg1Zhy2n57qIqItINqtX5cpMR6CwAAAQB0Uk5TAP+IEK+v//+A3P9Q3/8Q///f/9//x3//t////0DvIOT/7///1////++A/1D//////+r/r///7///QP/////P////////oP///////0D//////////xD/////ZBBw/////+///98g////YI/P/5D//////////8////////+F////WhD////f////z58g////aP/////////////////////////f//////////////8Q///////vv/+Q7/+f//////8QUHD//4D/IP////+//////9//UP//IP//////////YED///8gIP+g///////f//////+/////v////////86w1+8AAAAJcEhZcwAAFiUAABYlAUlSJPAAAAopSURBVHjanZkNXBPnHcdDtTIVLDqUgl1LbRFfEFLq6qykmjHXuBYIgQV0ijZofKlNiGMaXlrUpEKr5OrbWggma6QDxGClyYaiAWzDNFInMZIOeetcfWlFUSnitcqe57m75O6SiPqTe0n8PF9+/5d77u6BM4xGjP3q2Jny8nqgVzaeOTbpzRGcx9eIsesQia4D9eXHxn7+WLg3R77CYrl1bOwjm5vkSatEPwcqkcrXrnpMHEDUQxL4V1pZWQpFIic9NG9tOStOBKBwlCorb6x9KNyqM4xICVgpDVbj2pWO/GZ43le05FVS3mik0poatAMHsL01nMkR6+oRg8KRcdb4UHFx8boHh7uRiK+SzBzpzBsI7aA2PiDsVeUuCBEnFRlkuDdAK6ZptE/iNzfcjpjGqLEMUHGxxWJ5EJHiEaRSBsmrLJRGP+udV8NO2UPRfBI3svLuBbeCgrF4FsvErR68dWTqvONWbJixK3714oPL92+gwwRAcG+xHPG43Nht4Y4N1OKLm5E8pa6pKT4vLy11PwVDPEpLWQl8i0Zi8izFNRk8dSEmzyrJSC4qsskHS2ZZGCyk55lpHOm9CMhKTWdoKI+HyZviADBvUNx0seR1D15i4kQvAXurY3Ex4IWGqoWD7QfPpsXHi5va/S6WsGBI39KAN3y5A8AMNQIqxT/8eUxank3c5Od3cfAsQSJxfUjb3JWe5E4bAaE1xH4e4mk14SUnx1zr6RFn+fn5NcV/7XLX59J0ivfsaK/dSrCTEU/NS55/a9GYmz3i9qz2rHCxLRWgaO74cDeNsrjWgydwNdlBNYxYnbC5dcpQUtLU1mtZF9ubxEV5p7/o6yNpfD4fbkCUxdEekQoIHtjPh7z/bDYd76ooMHd3hw19vLpdPJiHRcZRsRIs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 2x"
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAAABGdBTUEAALGPC/xhBQAAAwBQTFRFAAAAv4+AEhIWX0xAxpeK1a+nJygmxZSFBAQD5sGtg2lYyqKXEREXCAgQxZWG1bGrpm1GwopkGBgeg08qxp6UUSwXr4yEFBQYw5OCzqWd2quM7dLF0amjb1tXoXthExIXIiAqzaWexZWE1bGqz5+fDxARiW9qSUBECgkHzqmNdkkpxpiGFRUZGxogl2E72LOuxZeHtYVjz6igckAc0KehQjkxy5+XExMYz5h1GRMPQSMOHBwi0Kmgx6KSqXxe0qukxqKd3bGW17WyICAgHRkWk21U1bCn7sTD0J+Dr456zqypzaScUkI0x5eHlXp60KWd7NnQx5qOFBMXLSMexpaFx5iKxZaF16+v45aUy6GXyrOpDg4R0XdvQjMphWJNJxgNSExRzKCV27quDAwOyJuO47ma2LWxxZF0pnFKdGNc1rGruZaPHRwiOjo8fVY9z5+AooV2wZyY17Ox68q1EQkDmWVQIBIKkHNtERAP17OrNS8sEBAg1bOtx5mLhWliExIVIB4kISIkGBcczaOaIR8lyp6Si1FAExIXW01OYTke7dbLCAYG16eRFhgYpHJZxZWDFBQa0aqjCwsO5sS0sntUz6+fGRkeDAsMm15C2rGifGRdKyUsv5eA58i5xpaFyp6V2Law2KybnGlDtYZtJCMr47yqGBAYGhkex5aE4rqlxZeJuZV/ICAwvYtuz6mh2bWx8+HZMS4ytY6AtHxbzKGWyJyOr5qOjXV1FBQZ1LCq0aihYEMuc0Qo8tjMrXZRy6SY68292bWxz5+Pi3Nl3bKbIhoXKiMihVQ0y6CSwpJ9noKBHRYV0KukEg4LOj9C0KegmXhq6cW0y5l8x5+HKRYJcGFheFpRnmM9EhIW8t3SiVg4yZuNjWpU1auVuoZkXFZSICAlx5Bq2qySGRkftZBxZFBFNjE21qWG68zAEA8T1K+oqYZ78NTGMSgnSzo1GBggyJ2SQEJB3r+1rXJZzKSbyZqMuJKHt52Po1xEclpUrZSDWkAznGpLpm9Kx5+PlXhqgvnBRgAAAQB0Uk5TABCA/7/f/3D///+/3yCPz///3/////9AQO///5D//6/vcO/vEP//z///////7///n///////QGD///+Ar///////YBD///////////8g////YL//35//IP+A/////////9//kP//kP//////////EP+Q/////////0D/EID///9w//+v////z/////////+A7++g//8QkP//////IP/Pz9///////yD/r////xD/QJ///////9///3CwgP////+P//8Q//////+f////cP//3////yD/////oP//j/////+Q//+///////////////9Aj////8/P//////////8g/wj+MlIAAAAJcEhZcwAACxMAAAsTAQCanBgAAAOnSURBVHjaddV9fAt3HAfwm41ePRRbN7SerVZ6ZOI8lHHt0I2MG6W1ZZ5bpc5TW2yI33pSNJHRhYWWzVMXbvNQTUfRaiat56IeU1rUQ5t6GMbMsO33+91DkpZP8kder3vn8/3d5e4XwjvNfbaObB8V1f7HrSuaE6/NGyugQQnBGfnhulczP1EJISGCoEMRhFFDazsfsU0QQnRSYmJ0upzhNZ2fIChVMVJS4DvlgReb+ZYgt2AAX0p++t0DPlF6UrxiQ2ngdpeVYTj+pxfd2R0jKpSDshuOiVJ24TiY3mPg/HR/m0ZKO9GdzXFPtNlSbpFG09XPBtYrPi8xlm3xPoZHvFb0jCSNyVNvFWaNL16EGQ3TErl/FYPy10mSHLe/9aAxD4uTi/xZzBiGRpVHbJ5JJ5NS83uHZ5bVn28CHUUGsw/CCV5wjDH1YtNKx3rD50+LTt6nZZlGED1lIq48cu47Ta4HxCYanIZZoFAuZJgdxBeQyIzV2EJTS/uXOLb5BjoN4ZGhaoyqYU4QizVKWJYVxpXOuDK2W0XF4N++zHyzUHZMdS7x2NOxune7dn5+etWn4dn/VBUcmiHVwdQlWkgKO9Z2IH97XFS52fe7//rd/aVEgfEdCLlMjaH6RbZjvaNpoNPX7HQGrMUsHofAQC2FVW/OX26OK8/LOxO4K68A98VLMI2m1R7xbxJXfjH7TFXvKmfgI+giIkTZgThFi1Lympf5ndf8udEQXploxquLEAsbEx/RtHT9Rbl51eElRzPXzglInCidB4xKlUu0U9Nq6fLj4jtdp/z91ehPtsX6KstTQbiQ2EG7fydEI7tviisz5yXGamSoQvmGgGfDMG74Hnmue7ajqiC2U8dqN1NtgHfPPsYj0wpJMqnP4W436xcti6+WmUq1E8LVbqaZB29blOCvTVxWGO5LgMxuj0a3eEuJhU0NNWJmNFosQdyW28dQYUKC3W7fiZ+Z1Wl4aKvjluBgi9EYbEEBer0+43wYdBBuiBYfwxNMWKsirVaLgFbr0gZpgwDPW2Eylg1DhR/LD/bsey4XAC6XCzLgAhQFGcfBTs5qzdozZLJ7qxgB4FGAdBCg0GfKylk5Pcdx8BsfeOw9C5ZqKR6gMoAZmsuhTs7K3/jVaz+bRElGDFoimq3nfqi5QfZqCE8BIytl4ikJtv229pbb6HsAiwDgKcpEQclDeG3AK3fxny+9DacjzqPpXfoOeP0fQ7M6bZau5KmVDdvs/cP7yP8uv0CUSHfONwAAAABJRU5ErkJggg=="
+              alt="pic 1"
+              width="40px"
+              height="40px"
+            />
+          </div>
         </li>
-        <li class="action">
-          <a
-            class="link"
-            href="https://github.com/vitejs/vite"
-            target="_blank"
-            rel="noopener noreferrer"
-            >View on GitHub</a
-          >
+        <li class="hero-position-second">
+          <div class="hero-img-circle">
+            <img
+              class="hero-img-height"
+              srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAAABGdBTUEAALGPC/xhBQAAAwBQTFRFAAAAAwYLY3V7tbW7SVtkg1pEYHBwOCsmiJqlZ4KRiHd0zbKnZH6HXCEqYnJ60rGhontqr7e/xZuHYHN6EBkkdUU9jWxeZ3yDZHV7eoyYr7O51NPWMj9Iv8DIoo2BYn2MXXB1rq63cICPhoSEZHV9boiUtLS8cIKJZEQze1hHsYlz09PYwKugAwYR1ryyonBTqbC0bX+JRyojfFU9e46Ydo2blJmjgGNds6afcIKKXnB3Hys0qYFrVmlyuZ6PW0dDgZOfZICEm2lLDBMdqJmTvLq8ZXeAuLi9s5OFcH+IYnV829rdtre9do2TiFY+XDIo3LmkuYpzw8TJMDtB38/PnqWucI+fdIeR0aqTPU1Xk2RLpXtkYHCAaX2EYXR6RTUvm3xsyJyReIuXeY2WsHJwdWZeeY6aeo6Za4OLpYVzm21b2sbAYn2KjGljt7i9j11FX3F7pZaSmYyMzqybZUg9ZX2HvI5+tKqrZH6LFR8rZnh/GBYYsrG32bussLvCj4+fYX2JaoCHZICJqqWrflNMck9Da4WSv6SWkmNTBQgOdIiRy8nNZoGMmoh7CQ4XpnFaxcfPVUE4UFJRuLK3eIyZaEpCpZybimJOj5SWdoqTV1pYmm5he5CcLy4wXnF5pqmyXGx0j09Paj01YXJ42rSd26V/VTQlg1tMcHCAlGtVaH6I38G1q4h4cICAY3Z8tYBeaCse1aeLf5airoZzITA9dlI/vZGCgVVFs4Nsq3ptw41s2q+h4b+ra0UzlpyhvLrDlHJjZ32GZ4GHaXqBHxsYeoOJsay0eYyW5Ma9dIyYrZKDdEw3iV1McYONn2ZVZHyHXzsvbUo6BgsZi2VUoqqzXFFLdpCchF1Twb69o3Vj2ralhIqLZnqCNktWBgsTtLS8Q1Vfmn90lGpaqYR6cYSOZXyEsJiLHCQszMzSfGZbck48uLm+nHRit3Z6ZXuBOzAsw5uNCwoMubW+rJKK4bykm2xWm3JctY17zq6hgI+felNFwb3Ez5+Cb4CHTWFpyqOTXVYEigAAAQB0Uk5TAP9AQP//EP//////z/+A//8g/8/////vr8+A///f/+9g3yD/7//Pj////5D//////////6//oP//YJ////////8g//////9w////z69A////////EP8Q//////8Q/4////+A/////+//////YP/v/7//////3////////////yCQ/5//////////n///////YP///3D/////////////oCD//9//////EP+///8QcP///7///////////////////3D/j////9//kP///9//QP///////////////////////////7D//////9///4D/////////////EP///8///yMk2WAAAAAJcEhZcwAACxMAAAsTAQCanBgAAARPSURBVHjaddV9WFNVHAfwO9QQsKA0MOlVWOFy0MwlxRRsQrS0QLMR46a5GDMTImCMEeWUly1xVChIwxVBLhyRxsvAmOKsVKCagHPM2wY0dS1FWLyFyjr3ZQwMv/c+95/7eX7nnN9zz7nQzLjVLq4MZLECFy6+zw26a74dCBSBsIhUvvDV7Oy0CEuUKAqHCoViNnrKD4ERRIQgyOrJ1XMVBK18/E53GoZhVCrmvlnPXJRV36uYBBDQt2aw747AWBBFPbOzs5NEpUplYZN41YX3TIO3aTSxmEZThC1iykydJJOJSqJKs3px+b7LPUXD8weTyTTJTCSpzCQlkaibiOVPjf68BQ2fBvdmyUwywEgkKYAk2cOiKKwDtbhb+qsFDxImk/60xT17aGgIUHDJWKBZSBQrEJ/mJxZnek3uTbFNI+qgwyvcswE0sRAsUdjgS9l4AISvUuLSHhDEFqW8qs7LJpmYAMFod0UJaEH2VFgX4oKD0xyNTSMp8V3uTOZVvGcgAwCeKWOzy0DAQ7G9Ksfb4RiMLYqvbg0/dCgMJtqL+EHQhjJXRHFeO4IdXl6NnJGRmrbEC5tAd8WwGFCRG7QNI1wu+rzU5un5z2BB9KrwLZ+1FTya+DmNhlFQsxZaySUC9EFvxzU5pTlXl35g1ZWCtr++eJlG4/MB1cKXoYe4rhys2nlD4hBobDfCldHLryRKcvl8DIrhDChpGixR5TSOqRwTugMXfbd7rfEtwiBW0g/i8sCF3iChZ1XjqrODcqW8X962PHrr0Z18QmphAIlwefRQFRpBz0S//N01BRTKUU8LIQFM4vHKnTDTqFIZjc09GqVEUkNhSH772UI4MPQZXjkIRukR4y3GH5vzXtOpO1oZFMbFADZRUatdAK0kIJ3H09NDW1Q7xv/My5X0+1Ao+9hkcn5+PnCFWu1laH85b6qi/kRLztvXK75O7/KpG6MEkFGIusJC7QC0geccm67Xl8fEvXO94t4Vtp66OoarIIC/Q1BSOV6TDqIPrTIKKh5UK0c5PVvJBASuMAN8Pdt46LoxqNenxcR4CzrUo5zR0QDM5Xt4ACfcDeC/2PzwiqnDw8bxGqWEU13NYWMOg0LhWvQTP0dHlwxYROo3wy3HxrryGmwNo/umu93YnnkjiY7N76O9scePxdz6/sUUjU7JuERA1GWsxbfhftTNt/pvzCwNuXU8JCV+nqaUwcbKYU74nnNjn6PTu61W683i1IaOkPhn53W0l/bhzgN1u1xHxQ8b/f332k9m7vnA1t7eft5m61oX4eF0C6adPa+/AuBNezGQyzSa80FByszIzWQAgTuSMOM8e9oKoL34lz0lyxqU6Yf71xkMz9w5Lp5PHzF3m0+itLXaV+fTZzAY5guFj536/5F7/5cnNtvtdrP5w9S+iWslkZGR3cJdCbOe4h8/94QZhWZzMWCRyUsS7v5jmLNk/ZPJZnPy3+tfmjPzzX+EaH3WETV+SgAAAABJRU5ErkJggg== 1x, /project-BigStartTheory09/assets/hero-ellipse2-mob@2x-ef22a5fc.png 2x"
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAAABGdBTUEAALGPC/xhBQAAAwBQTFRFAAAAAwYLY3V7tbW7SVtkg1pEYHBwOCsmiJqlZ4KRiHd0zbKnZH6HXCEqYnJ60rGhontqr7e/xZuHYHN6EBkkdUU9jWxeZ3yDZHV7eoyYr7O51NPWMj9Iv8DIoo2BYn2MXXB1rq63cICPhoSEZHV9boiUtLS8cIKJZEQze1hHsYlz09PYwKugAwYR1ryyonBTqbC0bX+JRyojfFU9e46Ydo2blJmjgGNds6afcIKKXnB3Hys0qYFrVmlyuZ6PW0dDgZOfZICEm2lLDBMdqJmTvLq8ZXeAuLi9s5OFcH+IYnV829rdtre9do2TiFY+XDIo3LmkuYpzw8TJMDtB38/PnqWucI+fdIeR0aqTPU1Xk2RLpXtkYHCAaX2EYXR6RTUvm3xsyJyReIuXeY2WsHJwdWZeeY6aeo6Za4OLpYVzm21b2sbAYn2KjGljt7i9j11FX3F7pZaSmYyMzqybZUg9ZX2HvI5+tKqrZH6LFR8rZnh/GBYYsrG32bussLvCj4+fYX2JaoCHZICJqqWrflNMck9Da4WSv6SWkmNTBQgOdIiRy8nNZoGMmoh7CQ4XpnFaxcfPVUE4UFJRuLK3eIyZaEpCpZybimJOj5SWdoqTV1pYmm5he5CcLy4wXnF5pqmyXGx0j09Paj01YXJ42rSd26V/VTQlg1tMcHCAlGtVaH6I38G1q4h4cICAY3Z8tYBeaCse1aeLf5airoZzITA9dlI/vZGCgVVFs4Nsq3ptw41s2q+h4b+ra0UzlpyhvLrDlHJjZ32GZ4GHaXqBHxsYeoOJsay0eYyW5Ma9dIyYrZKDdEw3iV1McYONn2ZVZHyHXzsvbUo6BgsZi2VUoqqzXFFLdpCchF1Twb69o3Vj2ralhIqLZnqCNktWBgsTtLS8Q1Vfmn90lGpaqYR6cYSOZXyEsJiLHCQszMzSfGZbck48uLm+nHRit3Z6ZXuBOzAsw5uNCwoMubW+rJKK4bykm2xWm3JctY17zq6hgI+felNFwb3Ez5+Cb4CHTWFpyqOTXVYEigAAAQB0Uk5TAP9AQP//EP//////z/+A//8g/8/////vr8+A///f/+9g3yD/7//Pj////5D//////////6//oP//YJ////////8g//////9w////z69A////////EP8Q//////8Q/4////+A/////+//////YP/v/7//////3////////////yCQ/5//////////n///////YP///3D/////////////oCD//9//////EP+///8QcP///7///////////////////3D/j////9//kP///9//QP///////////////////////////7D//////9///4D/////////////EP///8///yMk2WAAAAAJcEhZcwAACxMAAAsTAQCanBgAAARPSURBVHjaddV9WFNVHAfwO9QQsKA0MOlVWOFy0MwlxRRsQrS0QLMR46a5GDMTImCMEeWUly1xVChIwxVBLhyRxsvAmOKsVKCagHPM2wY0dS1FWLyFyjr3ZQwMv/c+95/7eX7nnN9zz7nQzLjVLq4MZLECFy6+zw26a74dCBSBsIhUvvDV7Oy0CEuUKAqHCoViNnrKD4ERRIQgyOrJ1XMVBK18/E53GoZhVCrmvlnPXJRV36uYBBDQt2aw747AWBBFPbOzs5NEpUplYZN41YX3TIO3aTSxmEZThC1iykydJJOJSqJKs3px+b7LPUXD8weTyTTJTCSpzCQlkaibiOVPjf68BQ2fBvdmyUwywEgkKYAk2cOiKKwDtbhb+qsFDxImk/60xT17aGgIUHDJWKBZSBQrEJ/mJxZnek3uTbFNI+qgwyvcswE0sRAsUdjgS9l4AISvUuLSHhDEFqW8qs7LJpmYAMFod0UJaEH2VFgX4oKD0xyNTSMp8V3uTOZVvGcgAwCeKWOzy0DAQ7G9Ksfb4RiMLYqvbg0/dCgMJtqL+EHQhjJXRHFeO4IdXl6NnJGRmrbEC5tAd8WwGFCRG7QNI1wu+rzU5un5z2BB9KrwLZ+1FTya+DmNhlFQsxZaySUC9EFvxzU5pTlXl35g1ZWCtr++eJlG4/MB1cKXoYe4rhys2nlD4hBobDfCldHLryRKcvl8DIrhDChpGixR5TSOqRwTugMXfbd7rfEtwiBW0g/i8sCF3iChZ1XjqrODcqW8X962PHrr0Z18QmphAIlwefRQFRpBz0S//N01BRTKUU8LIQFM4vHKnTDTqFIZjc09GqVEUkNhSH772UI4MPQZXjkIRukR4y3GH5vzXtOpO1oZFMbFADZRUatdAK0kIJ3H09NDW1Q7xv/My5X0+1Ao+9hkcn5+PnCFWu1laH85b6qi/kRLztvXK75O7/KpG6MEkFGIusJC7QC0geccm67Xl8fEvXO94t4Vtp66OoarIIC/Q1BSOV6TDqIPrTIKKh5UK0c5PVvJBASuMAN8Pdt46LoxqNenxcR4CzrUo5zR0QDM5Xt4ACfcDeC/2PzwiqnDw8bxGqWEU13NYWMOg0LhWvQTP0dHlwxYROo3wy3HxrryGmwNo/umu93YnnkjiY7N76O9scePxdz6/sUUjU7JuERA1GWsxbfhftTNt/pvzCwNuXU8JCV+nqaUwcbKYU74nnNjn6PTu61W683i1IaOkPhn53W0l/bhzgN1u1xHxQ8b/f332k9m7vnA1t7eft5m61oX4eF0C6adPa+/AuBNezGQyzSa80FByszIzWQAgTuSMOM8e9oKoL34lz0lyxqU6Yf71xkMz9w5Lp5PHzF3m0+itLXaV+fTZzAY5guFj536/5F7/5cnNtvtdrP5w9S+iWslkZGR3cJdCbOe4h8/94QZhWZzMWCRyUsS7v5jmLNk/ZPJZnPy3+tfmjPzzX+EaH3WETV+SgAAAABJRU5ErkJggg=="
+              alt="pic 2"
+              width="40px"
+              height="40px"
+            />
+          </div>
+        </li>
+        <li class="hero-position-third">
+          <div class="hero-img-circle">
+            <img
+              class="hero-img-height"
+              srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAAABGdBTUEAALGPC/xhBQAAAwBQTFRFAAAASFBGBQMBz5+fvJJ0Oigg3q2pJTwspXBREike2aal4LW1EDAg2J+gfnFsXzYku7Cf68a7IRELHDQqtINlupuXg2JZ4bW0cF9JPDQyIzgovLGjdEQta3Nk2qOhJx4bCBUN1Z2dHjYo57qqzZN9KD8w1KSUxWFm3q6qqYN9jmpmZEoz6r2ydltWSSQS16GgGDIkSU1DGTMmpHRq15+gzZuJjjU0FTYqz6+vpZqI2aOh3Kup1J+d2cS03q6qw4x94ba126qmjlpBECAgjH13kWNELyoqZFRU16iK4ri2JRoWUDAmwoFpMEAwQDo6EwcFITcqpnJj3rGuIjUn8dLDFjEk3K6r15+gDRwSWjUw47GjaEIzy5t737WyHTcoLToruIZ64bWzHzkrdEs/37ev2qilxpOEtIJy4q2bEycbgVI64K+rOEI3Pi8rl2NV4LOyo3x1r2xd2J+gVl5P4baz16OfHxkWFS4i0ZuG2ZyKMicik4x9IjstnHFmu4uH47i1v5OPGzQle1JF0XF2zJmXCAsGEEAo36+f2aOiakRBfEo2vIVys3ZjHjkr2rOkilZKNBwSXEM8JD4xHzcpDyMX2KSiGSweUy0a2Z+RKxQNNzM0wYlz4re1bTwnfltS79bL7MK02J+f3KunJDkszox81qCf26unrXlbxZNz05R+7M3CGzcp3a2TSz05GBIPjXNv26ml1KeI5sGnsnxrmHVzX0lFmEE/MSAaUTIrg3RdRCce4rSag1ZF2qejq3Rjl2RLHTswXTw14be1lVxL26um3KSSPDY5EhwTHjgoVkZGw5N7xqCcgkI5REs826yrGwsHvItvLhsTwKCG7cq2IDgoKkAzLzIgvot60KOD4LGtDygc6bKlXVRJ16Sh7cu7bE1GYjw306KcbVtX3auagV1aGjImMEBAmWlNCQMByopxSVxMVjgvJjktmGlXmnx0HDYpMyEVQjUzpHRazJSCq316dW1jvIhn3bGtb044EysdKiMb37S0r5KP26KL2aGeq3hnFLYIAgAAAQB0Uk5TAP//EP//r4D/72CwEK+Q/////+/////v//9g////j///QK///9///+/////////vQP/f/4D///8Q/8/P/////8///xD//////5////8Q//////////9w/////////8///0CQ/yCf////////////gP//////IP////////////////////8gEP//////////////oP/f////////YP//////37//cI//////cP////9A////////////////v//////f/4D////f//////+///////8g/////////////////////+8Q//////9w/////////////4////9w/////yaMk/4AAAAJcEhZcwAACxMAAAsTAQCanBgAAARtSURBVHjaddV/XBNlHAfwc0qaZjS1aIWKrtBoiJWUKR6N0rIZG7DJWhshKjDWFOfogE7mGeQETmGO4TB++oMfSRaokCwQbRKa4SoCssN0lCPFU6cWlNpzdwOG4ee11/2z9+v7/T7P7XkGjcysfZPzAjSagEWTF8yCHpixCwIiIzWlGpDISILIW5s0OptRGqkBrLQUUOCojEb3Bdyloi+92eOXlq4h9Ho9kHkT73czCOor/d1DnA8/H0id6R+k5zPZP7Lt1wQNg94sWFZXb2lOPdma7oL8xWPd4CIC9NHz9a0FBe819lausKiXHSYAgql8P+z28/mgHJ9/sOCkpdIab0/pDbHN9IMH89egm+hqElQdmtt7h8vmxVeuyJySeoFh4eHhKxmXVOaCiZzQvhRuVVUxz/pMtuDtQzSiMnchDdcOjn2RE3reP3E7e/vVnicat6T6w6oul6SbJw06opqTmxVc6+QGxvoGblqnbqUKKuiELxwuCMObr3MuN9d3pFRZa5tX14ap1QTFtPRnPYBlFKI24rnrHEt2tK+1JP7CS2FxWdUe6V0AUVFovSDoC0rRG+anVu/lsbkpXCubzbUGHz4xBAFdBX0ztF09HoLKErG9kpfCK2ZbO7Y0pqm6FFQ5Kv9ADw3B8x6Cved4zg3OLHvJuV3RO/rSaEeNqFBMghZTRkU9cq8dzbZyY9eFhclku2ITG1dv7qKr0es+Ds1loEoFN9tyTjitdhmPy7UHRm8qqkt3TUhN6gXRjoaXc2yZu5u+e/nIkR1ZzuhcoTkIIB2zaq3WBVVdKrjeZvZsTN4w5+M5wckdcQNCMwGYTqdjJGitYgILzFNymk4l744DLyauiCU08ylGR6vwgspoCB58ga2N5XnDaZfJfDv66hxCMzwEddrXwPZQfQHl15vbWOb8hLB79/osFptDmKPSDcNJ0EpmRiDfbROyzPPmeRZ6Z4ZcsrGER7VucD31Cullw/BvQgcrxzM/vzAzZEK5B8shcIO6VRCzkVS2OVis/ATvwoSm8tu3/85wNLvB4+DXM/SyizJarnkvbVo6YVqFvOLGQMs27bBcDuBW12Ej/E2m55sulZeflXfKK87+HPGrW+c1zBmE+aevXkQlWP+Tp6aNk8s7v+w88BWCiMa8cdq1lOX0mdkacPAFkQTDMAR7f5z8rZqamoaGHyIwBDWQ6Jlbj1MTrmGO4RVRO4phONaPSTYC1HAgXnamH5HgJEniInTMv7pPBw92DI4ZW6TSDB/pKx91/1hS0v2q0ihVGn0yfCQojqOPDl8VeyQmpdHUbzIi7UvEYvGSdqRfQpKIUokbUFGU293zepSEREVYBGk0Te8Wi6eTJChFojgKCu75Y8R9FoOhESKRCPFRPl38GHmMFBnAiDiOkTH3X5BPPYuiERiKST8o/tOAYjhogB8z/P7Z/6/cn3biuAQjJdKNKEqCviRuIGPeGfUW/2Tnt8BgvyAkBiQ5dfwjD/5jmD9+dtTDiGTqi7OvzB/5zX87tmAqgzAFsQAAAABJRU5ErkJggg== 1x, /project-BigStartTheory09/assets/hero-ellipse3-mob@2x-a7a79681.png 2x"
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAAABGdBTUEAALGPC/xhBQAAAwBQTFRFAAAASFBGBQMBz5+fvJJ0Oigg3q2pJTwspXBREike2aal4LW1EDAg2J+gfnFsXzYku7Cf68a7IRELHDQqtINlupuXg2JZ4bW0cF9JPDQyIzgovLGjdEQta3Nk2qOhJx4bCBUN1Z2dHjYo57qqzZN9KD8w1KSUxWFm3q6qqYN9jmpmZEoz6r2ydltWSSQS16GgGDIkSU1DGTMmpHRq15+gzZuJjjU0FTYqz6+vpZqI2aOh3Kup1J+d2cS03q6qw4x94ba126qmjlpBECAgjH13kWNELyoqZFRU16iK4ri2JRoWUDAmwoFpMEAwQDo6EwcFITcqpnJj3rGuIjUn8dLDFjEk3K6r15+gDRwSWjUw47GjaEIzy5t737WyHTcoLToruIZ64bWzHzkrdEs/37ev2qilxpOEtIJy4q2bEycbgVI64K+rOEI3Pi8rl2NV4LOyo3x1r2xd2J+gVl5P4baz16OfHxkWFS4i0ZuG2ZyKMicik4x9IjstnHFmu4uH47i1v5OPGzQle1JF0XF2zJmXCAsGEEAo36+f2aOiakRBfEo2vIVys3ZjHjkr2rOkilZKNBwSXEM8JD4xHzcpDyMX2KSiGSweUy0a2Z+RKxQNNzM0wYlz4re1bTwnfltS79bL7MK02J+f3KunJDkszox81qCf26unrXlbxZNz05R+7M3CGzcp3a2TSz05GBIPjXNv26ml1KeI5sGnsnxrmHVzX0lFmEE/MSAaUTIrg3RdRCce4rSag1ZF2qejq3Rjl2RLHTswXTw14be1lVxL26um3KSSPDY5EhwTHjgoVkZGw5N7xqCcgkI5REs826yrGwsHvItvLhsTwKCG7cq2IDgoKkAzLzIgvot60KOD4LGtDygc6bKlXVRJ16Sh7cu7bE1GYjw306KcbVtX3auagV1aGjImMEBAmWlNCQMByopxSVxMVjgvJjktmGlXmnx0HDYpMyEVQjUzpHRazJSCq316dW1jvIhn3bGtb044EysdKiMb37S0r5KP26KL2aGeq3hnFLYIAgAAAQB0Uk5TAP//EP//r4D/72CwEK+Q/////+/////v//9g////j///QK///9///+/////////vQP/f/4D///8Q/8/P/////8///xD//////5////8Q//////////9w/////////8///0CQ/yCf////////////gP//////IP////////////////////8gEP//////////////oP/f////////YP//////37//cI//////cP////9A////////////////v//////f/4D////f//////+///////8g/////////////////////+8Q//////9w/////////////4////9w/////yaMk/4AAAAJcEhZcwAACxMAAAsTAQCanBgAAARtSURBVHjaddV/XBNlHAfwc0qaZjS1aIWKrtBoiJWUKR6N0rIZG7DJWhshKjDWFOfogE7mGeQETmGO4TB++oMfSRaokCwQbRKa4SoCssN0lCPFU6cWlNpzdwOG4ee11/2z9+v7/T7P7XkGjcysfZPzAjSagEWTF8yCHpixCwIiIzWlGpDISILIW5s0OptRGqkBrLQUUOCojEb3Bdyloi+92eOXlq4h9Ho9kHkT73czCOor/d1DnA8/H0id6R+k5zPZP7Lt1wQNg94sWFZXb2lOPdma7oL8xWPd4CIC9NHz9a0FBe819lausKiXHSYAgql8P+z28/mgHJ9/sOCkpdIab0/pDbHN9IMH89egm+hqElQdmtt7h8vmxVeuyJySeoFh4eHhKxmXVOaCiZzQvhRuVVUxz/pMtuDtQzSiMnchDdcOjn2RE3reP3E7e/vVnicat6T6w6oul6SbJw06opqTmxVc6+QGxvoGblqnbqUKKuiELxwuCMObr3MuN9d3pFRZa5tX14ap1QTFtPRnPYBlFKI24rnrHEt2tK+1JP7CS2FxWdUe6V0AUVFovSDoC0rRG+anVu/lsbkpXCubzbUGHz4xBAFdBX0ztF09HoLKErG9kpfCK2ZbO7Y0pqm6FFQ5Kv9ADw3B8x6Cved4zg3OLHvJuV3RO/rSaEeNqFBMghZTRkU9cq8dzbZyY9eFhclku2ITG1dv7qKr0es+Ds1loEoFN9tyTjitdhmPy7UHRm8qqkt3TUhN6gXRjoaXc2yZu5u+e/nIkR1ZzuhcoTkIIB2zaq3WBVVdKrjeZvZsTN4w5+M5wckdcQNCMwGYTqdjJGitYgILzFNymk4l744DLyauiCU08ylGR6vwgspoCB58ga2N5XnDaZfJfDv66hxCMzwEddrXwPZQfQHl15vbWOb8hLB79/osFptDmKPSDcNJ0EpmRiDfbROyzPPmeRZ6Z4ZcsrGER7VucD31Cullw/BvQgcrxzM/vzAzZEK5B8shcIO6VRCzkVS2OVis/ATvwoSm8tu3/85wNLvB4+DXM/SyizJarnkvbVo6YVqFvOLGQMs27bBcDuBW12Ej/E2m55sulZeflXfKK87+HPGrW+c1zBmE+aevXkQlWP+Tp6aNk8s7v+w88BWCiMa8cdq1lOX0mdkacPAFkQTDMAR7f5z8rZqamoaGHyIwBDWQ6Jlbj1MTrmGO4RVRO4phONaPSTYC1HAgXnamH5HgJEniInTMv7pPBw92DI4ZW6TSDB/pKx91/1hS0v2q0ihVGn0yfCQojqOPDl8VeyQmpdHUbzIi7UvEYvGSdqRfQpKIUokbUFGU293zepSEREVYBGk0Te8Wi6eTJChFojgKCu75Y8R9FoOhESKRCPFRPl38GHmMFBnAiDiOkTH3X5BPPYuiERiKST8o/tOAYjhogB8z/P7Z/6/cn3biuAQjJdKNKEqCviRuIGPeGfUW/2Tnt8BgvyAkBiQ5dfwjD/5jmD9+dtTDiGTqi7OvzB/5zX87tmAqgzAFsQAAAABJRU5ErkJggg=="
+              alt="pic 3"
+              width="40px"
+              height="40px"
+            />
+          </div>
+        </li>
+        <li class="hero-position-fourth">
+          <div class="hero-img-four">
+            2K<span class="hero-text-rewievs"> rewievs</span>
+          </div>
         </li>
       </ul>
-    </div>
 
-    <div class="thumb">
-      <!-- Path to images as from index.html file -->
-      <img
-        class="pic"
-        src="/vanilla-app-template/assets/vite-logo-51249ca9.png"
-        alt="Vite logo"
-        width="640"
-        height="640"
-      />
+      <h1 class="hero-title">
+        ORGANIC <span class="hero-title-text">VEGETABLES</span> TO YOUR DIET
+        TODAY!
+      </h1>
+      <p class="hero-text">
+        Our expertly curated vegetable baskets are made with the freshest,
+        highest quality vegetables available. Fresh Harvest Box has got you
+        covered. Fresh, high-quality vegetables in expertly curated vegetable
+        baskets delivered to you.
+      </p>
+
+      <div class="hero-btn-main">
+        <button type="button" class="hero-button-shop" data-modal-open-2>
+          SHOP NOW
+        </button>
+      </div>
+    </div>
+    <div class="hero-wrap-secondary">
+      <picture class="hero-picture">
+        <source
+          srcset="/project-BigStartTheory09/assets/hero-image-desk-d136ec97.png 1x, /project-BigStartTheory09/assets/hero-image-desk@2x-800fa845.png 2x"
+          media="(min-width: 1280px)"
+        />
+        <source
+          srcset="/project-BigStartTheory09/assets/hero-image-tab-2a9ee30e.png 1x, /project-BigStartTheory09/assets/hero-image-tab@2x-0bea1a96.png 2x"
+          media="(min-width: 768px)"
+        />
+        <source
+          srcset="/project-BigStartTheory09/assets/hero-image-mob-5b597b6b.png 1x, /project-BigStartTheory09/assets/hero-image-mob@2x-c28d901c.png 2x"
+          media="(max-width: 767px)"
+        />
+        <img
+          class="hero-main-img"
+          src="/project-BigStartTheory09/assets/hero-image-mob-5b597b6b.png"
+          alt="pic 3"
+          width=""
+        />
+      </picture>
+
+      <ul class="list hero-buttons-list">
+        <li class="hero-btn-item hero-margin-tablet">
+          <button type="button" class="hero-btn">#ORGANIC</button>
+        </li>
+        <li class="hero-btn-item">
+          <button type="button" class="hero-btn">#PRODUCTS</button>
+        </li>
+
+        <li class="hero-btn-item">
+          <button type="button" class="hero-btn">#BASKET</button>
+        </li>
+        <li class="hero-btn-item">
+          <button type="button" class="hero-btn">#VEGETABLES</button>
+        </li>
+      </ul>
     </div>
   </div>
 </section>
 
 
+      <!-- How it works-->
+      <section class="how-it-work" id="how-it-works">
+  <div class="container how-it-works-first">
+    <h2 class="how-it-works-first-title">
+      TO ORDER YOUR VEGETABLE BASCET, SIMPLY FOLLOW THESE EASY STEPS
+    </h2>
+    <picture>
+      <source
+        srcset="/project-BigStartTheory09/assets/vegetables-desk-1eedc4eb.png 1x, /project-BigStartTheory09/assets/vegetables-desk@2x-6774b4b3.png 2x"
+        media="(min-width: 1280px)"
+      />
+      <source
+        srcset="/project-BigStartTheory09/assets/vegetables-tab-e047357b.png 1x, /project-BigStartTheory09/assets/vegetables-tab@2x-8dfb35f3.png 2x"
+        media="(min-width: 768px)"
+      />
+      <source
+        srcset="/project-BigStartTheory09/assets/vegetables-mob-1f1ba133.png 1x, /project-BigStartTheory09/assets/vegetables-mob@2x-7d75c123.png 2x"
+        media="(max-width: 767px)"
+      />
+      <img
+        src="./images/mob.png"
+        alt="photo greens"
+        class="how-it-works-first-image"
+      />
+    </picture>
+    <ul class="how-it-works-first-list list">
+      <li class="how-it-works-first-link link">
+        <p class="how-it-works-first-text para-one">
+          Our baskets are assembled with care and delivered straight to your
+          doorstep, so you can enjoy the taste of fresh fruit without ever
+          leaving your home.
+        </p>
+      </li>
+      <li class="how-it-works-first-link link">
+        <p class="how-it-works-first-text">
+          Whether you're looking for a healthy snack or a thoughtful gift, our
+          fruit baskets are the perfect choice.
+        </p>
+      </li>
+    </ul>
+  </div>
+
+  <div class="easy-steps container">
+    <div class="how-img">
+      <picture class="img-girl">
+        <source
+          media="(min-width: 1280px)"
+          srcset="/project-BigStartTheory09/assets/girl-desk-603af3ea.png 1x, /project-BigStartTheory09/assets/girl-desk@2x-1de1570d.png 2x"
+        />
+        <source
+          media="(min-width: 768px)"
+          srcset="/project-BigStartTheory09/assets/girl-tab-49c0be06.png 1x, /project-BigStartTheory09/assets/girl-tab@2x-7506b3c5.png 2x"
+        />
+        <source
+          media="(min-width: 375px)"
+          srcset="/project-BigStartTheory09/assets/girl-mob-42294672.png 1x, /project-BigStartTheory09/assets/girl-mob@2x-adcee166.png 2x"
+        />
+        <img src="/project-BigStartTheory09/assets/girl-desk-603af3ea.png" alt="girl" />
+      </picture>
+    </div>
+    <div class="easy-text">
+      <p class="paragraf-easy-steps">
+        3 Easy Steps for Buying Fresh Vegetables
+      </p>
+      <ol class="easy-steps-list">
+        <li class="easy-steps-link">
+          <p class="easy-steps-link-par">
+            Just choose the vegetable you want to order by clicking on the
+            checkboxes next to it.
+          </p>
+        </li>
+        <li class="easy-steps-link">
+          <p class="easy-steps-link-par">
+            Click on the basket and fill <br />out the form.
+          </p>
+        </li>
+        <li class="easy-steps-link">
+          <p class="easy-steps-link-par">
+            Sit back and relax! Your fresh vegetables basket will be delivered.
+          </p>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+
+      <!-- Vegetables -->
+      <section class="section organic">
+  <div class="container">
+    <h2 class="organic-title" id="vegetables">Organic vegetables</h2>
+    <p class="organic-text">
+      Our organic vegetables are hand-picked from local farms and delivered
+      straight to your doorstep, ensuring that you get the freshest and most
+      nutritious produce possible.
+    </p>
+    <ul class="organic-list list">
+      <li class="organic-list-item">
+        <div class="organic-thumb">
+          <div class="organic-picture">
+            <picture>
+              <source
+                srcset="/project-BigStartTheory09/assets/carrot-desk-333d1395.png 1x, /project-BigStartTheory09/assets/carrot-desk@2x-36e20196.png 2x"
+                media="(min-width: 1280px)"
+              />
+              <source
+                srcset="/project-BigStartTheory09/assets/carrot-tab-8212e057.png 1x, /project-BigStartTheory09/assets/carrot-tab@2x-a3ecd86e.png 2x"
+                media="(min-width: 768px)"
+              />
+              <source
+                srcset="/project-BigStartTheory09/assets/carrot-mob-47a1d14c.png 1x, /project-BigStartTheory09/assets/carrot-mob@2x-5a688b40.png 2x"
+                media="(max-width: 767px)"
+              />
+              <img src="./img/desktop/vegetables/carrot.png" alt="carrot" />
+            </picture>
+          </div>
+
+          <p class="organic-veg">Carrot</p>
+          <p class="organic-plant">Plant</p>
+          <p class="organic-price">100 UAH / kg</p>
+        </div>
+      </li>
+      <li class="organic-list-item">
+        <div class="organic-thumb">
+          <div class="organic-picture">
+            <picture>
+              <source
+                srcset="/project-BigStartTheory09/assets/brussel-desk-c35ed6ea.png 1x, /project-BigStartTheory09/assets/brussel-desk@2x-6ff09229.png 2x"
+                media="(min-width: 1280px)"
+              />
+              <source
+                srcset="/project-BigStartTheory09/assets/brussel-tab-7d79f692.png 1x, /project-BigStartTheory09/assets/brussel-tab@2x-504dd6b9.png 2x"
+                media="(min-width: 768px)"
+              />
+              <source
+                srcset="/project-BigStartTheory09/assets/brussel-mob-c5ca17f5.png 1x, /project-BigStartTheory09/assets/brussel-mob@2x-83f22bdc.png 2x"
+                media="(max-width: 767px)"
+              />
+              <img src="./img/desktop/vegetables/brussel.png" alt="brussel" />
+            </picture>
+          </div>
+
+          <p class="organic-veg">Brussel sprouts</p>
+          <p class="organic-plant">Plant</p>
+          <p class="organic-price">80 UAH / kg</p>
+        </div>
+      </li>
+      <li class="organic-list-item">
+        <div class="organic-thumb">
+          <div class="organic-picture">
+            <picture>
+              <source
+                srcset="/project-BigStartTheory09/assets/tomato-desk-91537ccb.png 1x, /project-BigStartTheory09/assets/tomato-desk@2x-ea018e76.png 2x"
+                media="(min-width: 1280px)"
+              />
+              <source
+                srcset="/project-BigStartTheory09/assets/tomato-tab-016d5f4d.png 1x, /project-BigStartTheory09/assets/tomato-tab@2x-d9327253.png 2x"
+                media="(min-width: 768px)"
+              />
+              <source
+                srcset="/project-BigStartTheory09/assets/tomato-mob-848d05c5.png 1x, /project-BigStartTheory09/assets/tomato-mob@2x-1e1d451a.png 2x"
+                media="(max-width: 767px)"
+              />
+              <img src="./img/mobile/vegetables/tomato.png" alt="tomato" />
+            </picture>
+          </div>
+
+          <p class="organic-veg">Tomato</p>
+          <p class="organic-plant">Plant</p>
+          <p class="organic-price">40 UAH / kg</p>
+        </div>
+      </li>
+      <li class="organic-list-item">
+        <div class="organic-thumb">
+          <div class="organic-picture">
+            <picture>
+              <source
+                srcset="/project-BigStartTheory09/assets/eggplant-desk-f87075ac.png 1x, /project-BigStartTheory09/assets/eggplant-desk@2x-4a8149d0.png 2x"
+                media="(min-width: 1280px)"
+              />
+              <source
+                srcset="/project-BigStartTheory09/assets/eggplant-desk-f87075ac.png 1x, /project-BigStartTheory09/assets/eggplant-desk@2x-4a8149d0.png 2x"
+                media="(min-width: 768px)"
+              />
+              <source
+                srcset="/project-BigStartTheory09/assets/eggplant-mob-2870a8b9.png 1x, /project-BigStartTheory09/assets/eggplant-mob@2x-55683d9d.png 2x"
+                media="(max-width: 767px)"
+              />
+              <img src="./img/desktop/vegetables/eggplant.png" alt="eggplant" />
+            </picture>
+          </div>
+
+          <p class="organic-veg">Eggplant</p>
+          <p class="organic-plant">Plant</p>
+          <p class="organic-price">60 UAH / kg</p>
+        </div>
+      </li>
+      <li class="organic-list-item">
+        <div class="organic-thumb">
+          <div class="organic-picture">
+            <picture>
+              <source
+                srcset="/project-BigStartTheory09/assets/potatoes-desk-4d33bec2.png 1x, /project-BigStartTheory09/assets/potatoes-desk@2x-93b26c4d.png 2x"
+                media="(min-width: 1280px)"
+              />
+              <source
+                srcset="/project-BigStartTheory09/assets/potatoes-tab-b4b8ab26.png 1x, /project-BigStartTheory09/assets/potatoes-tab@2x-889486da.png 2x"
+                media="(min-width: 768px)"
+              />
+              <source
+                srcset="/project-BigStartTheory09/assets/potatoes-mob-0ff5d603.png 1x, /project-BigStartTheory09/assets/potatoes-mob@2x-d53def5b.png 2x"
+                media="(max-width: 767px)"
+              />
+              <img src="./img/desktop/vegetables/potatoes.png" alt="potatoes" />
+            </picture>
+          </div>
+
+          <p class="organic-veg">Sweet potatoes</p>
+          <p class="organic-plant">Plant</p>
+          <p class="organic-price">80 UAH / kg</p>
+        </div>
+      </li>
+      <li class="organic-list-item">
+        <div class="organic-thumb">
+          <div class="organic-picture">
+            <picture>
+              <source
+                srcset="/project-BigStartTheory09/assets/leek-desk-b287af5b.png 1x, /project-BigStartTheory09/assets/leek-desk@2x-810a02be.png 2x"
+                media="(min-width: 1280px)"
+              />
+              <source
+                srcset="/project-BigStartTheory09/assets/leek-tab-c70e7dd9.png 1x, /project-BigStartTheory09/assets/leek-tab@2x-d812f714.png 2x"
+                media="(min-width: 768px)"
+              />
+              <source
+                srcset="/project-BigStartTheory09/assets/leek-mob-073a2d55.png 1x, /project-BigStartTheory09/assets/leek-mob@2x-66cce57f.png 2x"
+                media="(max-width: 767px)"
+              />
+              <img src="./img/desktop/vegetables/leek.png" alt="leek" />
+            </picture>
+          </div>
+
+          <p class="organic-veg">Leek</p>
+          <p class="organic-plant">Plant</p>
+          <p class="organic-price">50 UAH / kg</p>
+        </div>
+      </li>
+      <li class="organic-list-item">
+        <div class="organic-thumb">
+          <div class="organic-picture">
+            <picture>
+              <source
+                srcset="/project-BigStartTheory09/assets/mushrooms-desk-2644b13e.png 1x, /project-BigStartTheory09/assets/mushrooms-desk@2x-72dd755c.png 2x"
+                media="(min-width: 1280px)"
+              />
+              <source
+                srcset="/project-BigStartTheory09/assets/mushrooms-tab-7be11745.png 1x, /project-BigStartTheory09/assets/mushrooms-tab@2x-187d9866.png 2x"
+                media="(min-width: 768px)"
+              />
+              <source
+                srcset="/project-BigStartTheory09/assets/mushrooms-mob-06551970.png 1x, /project-BigStartTheory09/assets/mushrooms-mob@2x-cab98832.png 2x"
+                media="(max-width: 767px)"
+              />
+              <img
+                src="./img/mobile/vegetables/mushrooms.png"
+                alt="mushrooms"
+              />
+            </picture>
+          </div>
+
+          <p class="organic-veg">Mushrooms</p>
+          <p class="organic-plant">Plant</p>
+          <p class="organic-price">40 UAH / kg</p>
+        </div>
+      </li>
+      <li class="organic-list-item">
+        <div class="organic-thumb">
+          <div class="organic-picture">
+            <picture>
+              <source
+                srcset="/project-BigStartTheory09/assets/corn-desk-b6a22b71.png 1x, /project-BigStartTheory09/assets/corn-desk@2x-b50198ac.png 2x"
+                media="(min-width: 1280px)"
+              />
+              <source
+                srcset="/project-BigStartTheory09/assets/corn-tab-7d56bb4b.png 1x, /project-BigStartTheory09/assets/corn-tab@2x-92dae565.png 2x"
+                media="(min-width: 768px)"
+              />
+              <source
+                srcset="/project-BigStartTheory09/assets/corn-mob-b8343e5e.png 1x, /project-BigStartTheory09/assets/corn-mob@2x-5a477b23.png 2x"
+                media="(max-width: 767px)"
+              />
+              <img src="./img/desktop/vegetables/corn.png" alt="corn" />
+            </picture>
+          </div>
+
+          <p class="organic-veg">Corn</p>
+          <p class="organic-plant">Plant</p>
+          <p class="organic-price">60 UAH / kg</p>
+        </div>
+      </li>
+      <li class="organic-list-item organic-radish">
+        <div class="organic-thumb">
+          <div class="organic-picture">
+            <picture>
+              <source
+                srcset="/project-BigStartTheory09/assets/radish-desk-09bb49b2.png 1x, /project-BigStartTheory09/assets/radish-desk@2x-8c6318ee.png 2x"
+                media="(min-width: 1280px)"
+              />
+              <source
+                srcset="
+                  ./img/tablet/vegetables/radish-tab.png    1x,
+                  ./img/tablet/vegetables/radish-tab@2x.png 2x
+                "
+                media="(min-width: 768px)"
+              />
+              <source
+                srcset="
+                  ./img/mobile/vegetables/radish-mob.png    1x,
+                  ./img/mobile/vegetables/radish-mob@2x.png 2x
+                "
+                media="(max-width: 767px)"
+              />
+              <img src="./img/desktop/vegetables/radish.png" alt="radish" />
+            </picture>
+          </div>
+
+          <p class="organic-veg">Radish</p>
+          <p class="organic-plant">Plant</p>
+          <p class="organic-price">90 UAH / kg</p>
+        </div>
+      </li>
+    </ul>
+    <button type="button" class="organic-button" data-modal-open-1>
+      <svg class="organic-icon" width="14" height="14">
+        <use href="/project-BigStartTheory09/assets/iconss-6c14b7d6.svg#Vector"></use>
+      </svg>
+      <span class="organic-rotate">Order</span>
+    </button>
+  </div>
+</section>
+
+
+      <!-- We will call you -->
+      <section class="connect-section container">
+  <div class="connect-box">
+    <div class="connect-first-part">
+      <h1 class="connect-title">Fresh Harvest Box has got you covered</h1>
+      <p class="connect-text">
+        Our boxes are packed with delicious, nutritious vegetables, perfect for
+        anyone looking to eat healthier or support local farmers. Order your box
+        today and start enjoying the best that nature has to offer!
+      </p>
+
+      <form class="connect-form">
+        <input
+          type="tel"
+          class="connect-input"
+          placeholder="+380 ()"
+          name="user_phone"
+          required
+          pattern="[0-9]{3}[0-9]{2}[0-9]{3}-[0-9]{2}-[0-9]{2}"
+          title="xxx-xx-xxx-xx-xx"
+        />
+        <button type="submit" class="connect-btn">Recall</button>
+      </form>
+    </div>
+    <div class="connect-picture">
+      <picture>
+        <source
+          srcset="/project-BigStartTheory09/assets/woman-desk-d6e60e32.png 1x, /project-BigStartTheory09/assets/woman-desk@2x-43d9d0ec.png 2x"
+          media="(min-width: 1200px)"
+        />
+
+        <source
+          srcset="/project-BigStartTheory09/assets/woman-tab-a5345342.png 1x, /project-BigStartTheory09/assets/woman-tab@2x-0b2ebe3d.png 2x"
+          media="(min-width: 768px)"
+        />
+
+        <source
+          srcset="/project-BigStartTheory09/assets/woman-mob-dc3d27a4.png 1x, /project-BigStartTheory09/assets/woman-mob@2x-c5bf123c.png 2x"
+          media="(max-width: 767px)"
+        />
+
+        <img
+          class="connect-foto"
+          src="/project-BigStartTheory09/assets/woman-mob-dc3d27a4.png"
+          alt="Woman"
+          width="335"
+        />
+      </picture>
+    </div>
+  </div>
+</section>
+
+    </main>
+
+    <!-- Footer -->
+    
+    <!-- Footer veggieboost -->
+    <footer id="footer" class="footer-veggieboost">
+      <!-- footer-veggieboost-container -->
+      <div class="container footer-veggieboost-container">
+        <!-- logo and footer nav  -->
+        <div class="footer-veggieboost-logo">
+          <div class="picture-logo-wrap">
+            <picture>
+              <source
+                srcset="/project-BigStartTheory09/assets/broccoli-desk-67fbfb69.png 1x, /project-BigStartTheory09/assets/broccoli-desk@2x-4b163f63.png 2x"
+                media="(min-width: 1280px)"
+              />
+
+              <source
+                srcset="/project-BigStartTheory09/assets/broccoli-desk-67fbfb69.png 1x, /project-BigStartTheory09/assets/broccoli-desk@2x-4b163f63.png 2x"
+                media="(min-width: 768px)"
+              />
+
+              <source
+                srcset="/project-BigStartTheory09/assets/broccoli-mob-a37684ce.png 1x, /project-BigStartTheory09/assets/broccoli-mob@2x-20612969.png 2x"
+                media="(max-width: 767px)"
+              />
+
+              <img
+                src="/project-BigStartTheory09/assets/broccoli-mob-a37684ce.png"
+                alt="Logo"
+                class="img-footer"
+              />
+            </picture>
+
+            <a href="index.html" class="footer-logo-link">
+              <svg width="16" height="16" class="footer-logo-icon">
+                <use href="/project-BigStartTheory09/assets/iconss-6c14b7d6.svg#logo"></use>
+              </svg>
+              <span class="span-footer-logo">VEGGIEBOOST</span>
+            </a>
+          </div>
+          <div class="box-list-footer-logo">
+            <ul class="list-footer list-footer-logo">
+              <li class="footer-logo-nav-list">
+                <a href="#how-it-works" class="footer-nav-link">How It Works</a>
+              </li>
+              <li>
+                <a href="#vegetables" class="footer-nav-link">Vegetables</a>
+              </li>
+              <li><a href="#footer" class="footer-nav-link">Contacts</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- social media  footer -->
+        <div class="footer-tablet-sm-cd">
+          <div class="footer-veggieboost-social-media">
+            <ul class="list-footer list-footer-social-media">
+              <li class="list-icon-social-media">
+                <a href="#" class="footer-social-list-link">
+                  <svg class="footer-social-media-icon" width="24" height="24">
+                    <use href="/project-BigStartTheory09/assets/iconss-6c14b7d6.svg#facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="list-icon-social-media">
+                <a href="#" class="footer-social-list-link">
+                  <svg class="footer-social-media-icon" width="24" height="24">
+                    <use href="/project-BigStartTheory09/assets/iconss-6c14b7d6.svg#instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="list-icon-social-media">
+                <a href="#" class="footer-social-list-link">
+                  <svg class="footer-social-media-icon" width="24" height="24">
+                    <use href="/project-BigStartTheory09/assets/iconss-6c14b7d6.svg#youtube"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- footer contact detailes -->
+          <div class="footer-veggieboost-contact-detailes">
+            <a href="tel:+380684439426" class="footer-contact-detailes-link"
+              >+380 (68) 443-94-26</a
+            >
+            <p class="footer-contact-detailes-text">
+              1678 S. Pioneer Road Salt Lake City<br />
+              UT 84104
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+
+
+    <!-- Modal - Your order -->
+    <div class="backdrop is-hidden" data-modal>
+  <div class="modal">
+    <button class="modal-close-btn" type="button" data-modal-close>
+      <svg class="modal-close-icon">
+        <use href="/project-BigStartTheory09/assets/iconss-6c14b7d6.svg#close-btn-x"></use>
+      </svg>
+    </button>
+
+    <form class="modal-form">
+      <h1 class="modal-title">Your Order</h1>
+      <ul class="form-list list">
+        <li class="form-item">
+          <div class="form-item-check">
+            <input
+              class="form-check visually-hidden"
+              type="checkbox"
+              name="cabbage"
+              id="cabbage"
+              value="true"
+              required
+            />
+            <label class="check-label" for="cabbage">
+              <svg class="check-icon" width="16" height="16">
+                <use href="/project-BigStartTheory09/assets/iconss-6c14b7d6.svg#icon-check"></use>
+              </svg>
+            </label>
+          </div>
+          <div class="form-item-primary">
+            <h2 class="form-item-title">Cabbage Basket</h2>
+            <p class="form-item-text">Plant</p>
+          </div>
+          <picture class="form-item-pic">
+            <source
+              srcset="/project-BigStartTheory09/assets/modal-cabbage-desk-3788f20a.png 1x, /project-BigStartTheory09/assets/modal-cabbage-desk@2x-4446b491.png 2x"
+              media="(min-width: 1280px)"
+            />
+            <source
+              srcset="/project-BigStartTheory09/assets/modal-cabbage-tab-7deef82a.png 1x, /project-BigStartTheory09/assets/modal-cabbage-tab@2x-bede5952.png 2x"
+              media="(min-width: 768px)"
+            />
+            <source
+              srcset="/project-BigStartTheory09/assets/modal-cabbage-mob-25f81644.png 1x, /project-BigStartTheory09/assets/modal-cabbage-mob@2x-29db53a0.png 2x"
+              media="(max-width: 767px)"
+            />
+            <img
+              src="/project-BigStartTheory09/assets/modal-cabbage-desk-3788f20a.png"
+              alt="photo cabbage basket"
+              width="243"
+            />
+          </picture>
+        </li>
+
+        <li class="form-item">
+          <div class="form-item-check">
+            <input
+              class="form-check visually-hidden"
+              type="checkbox"
+              name="tomato"
+              id="tomato"
+              value="true"
+              required
+            />
+            <label class="check-label" for="tomato">
+              <svg class="check-icon" width="16" height="16">
+                <use href="/project-BigStartTheory09/assets/iconss-6c14b7d6.svg#icon-check"></use>
+              </svg>
+            </label>
+          </div>
+          <div class="form-item-primary">
+            <h2 class="form-item-title">Tomato Basket</h2>
+            <p class="form-item-text">Plant</p>
+          </div>
+          <picture class="form-item-pic">
+            <source
+              srcset="/project-BigStartTheory09/assets/modal-tomato-desk-3809fad9.png 1x, /project-BigStartTheory09/assets/modal-tomato-desk@2x-94981f51.png 2x"
+              media="(min-width: 1280px)"
+            />
+            <source
+              srcset="/project-BigStartTheory09/assets/modal-tomato-tab-a68322b0.png 1x, /project-BigStartTheory09/assets/modal-tomato-tab@2x-d04e7f1b.png 2x"
+              media="(min-width: 768px)"
+            />
+            <source
+              srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAF4AAABOCAMAAACe2lHHAAAABGdBTUEAALGPC/xhBQAAAwBQTFRFAAAAOgsMwRsj7nNTWzQjg2Avx7KPmUAybkoZ8mNNTwYNxHdJbWEpxVBH+3xg1JWEPzQOhBAX1kdF38y5hzon4ycnlIU6RAAA6sqvxmc6aQwRkE40lGJLgIAA+ZVjyKCMnhIfxap1hFVB000371Q7PAYJvnFBrGpO7LCOnlQx9UQ6pjYtQhwQgICAxYNo/nNRazki5zQyaioir41beU88/+PXrhghzLOMpXpCwKBamWhXlXY77YpWsIde1CQmjFpGvjgqhjs3kltE7Xti+GtaSigcYDAi/zk98Xlh0ryI/Jl2YTgppXZXxEUt2aRk1oNliCkd68GniCodbUAsmHhCglE6SQwMUSMU8pJonCUdvJ1++WVK38qp3n9V9ks1v4BAmlc8sp9t1L6aqYNIrnZe7yor/0Q/+Xlr79W+3WZIzCAk/3t7j3A1dA0TYjQvriggnzwqgFdHl3M2XDMgiVM7f1YspGRKsZxrn2lT8Zdh/Yhn////kzkpmmo2XBwX+oVlTg8OeUs12LJ8gFUk/mRM/lpMaSsajVlD/IRgMxIMVVUA69C3wZpy4rWZ0TUogkUvxI51xXdqe0MthXIn/5+F/pprqWU2pDsz1Wc2WAkOjFM7w4hUlB8a776hpVtAvyYioygegkw1+zQzjhMZ8TUt2ZB1Yj0uZD4swZxy/mtPsYRvhVg5qpFO72JOpFlU/ntVunpp9OLSdTsk/8WvThwQnGNKsZ5imopP5YFl/oNXsSksVysZsTUosXRRk1xF2F1a3CQno3FchnE4+6d5fBEV8mtXoj88qHhQ7E08oHhO/kxCr4dqq4xeeh4Sj0Mtk1U8w691wJ+Hi1tGdEQtrlgzZBQQ+V5Y2aiL3pt4w5JjdyoZvaBy/7SM/1ZBy7STw3hY/ota2siZk2NPYQoP2kcv/pZgih4Yf1Qlqnoz/r6eqpWVnRwdw2hN9pprQgYLg1M8/9XD2YtrlmNDpCglm1xDalch2pBQ/vDr+IViZDYibUlJLxIL84VmzSsotKd6vygsPffMgQAAAQB0Uk5TAFL/RztZR2T/X8v//yrF////+yj///8E//////4C6RX/zZqi/5Ce///+D+L9Av/////P3sj//4KR/9fW/0j/4/8KESHcNYv/h///bBP//f/pzcL++/H+/yD/Y7aY//8E/9Dn+/////////8F3f8T//8o///QeP+s//39ATCSTauy/ybq/////3MgA1L//////A3//////5z////+/////////////7H8lf//uv8XEP8jpv//////+Dn+///////////+//+HIjb/tf9u/yL///8sU///c9f/////4v//G////3yG//////7/DP//WOr///8p///////Z/wc0Rf/5//KzjpUAAAAJcEhZcwAACxMAAAsTAQCanBgAAArhSURBVHja7Zh7fJPlFcdrvVVBsKzBQjKErSxkatPoKKIYIwi15VI1FexGs4w26UVrsOhLqIpEc8HNNjUlKCGkTS/WYDUsbYopzWuaVIVYk0jZGkpj063pZWG+BFOhaunO8wbdtHULjH0++6O/3vKWD99znt85z/OcNGZa05rWtKb1f6wnDh1a9dr/Cv7OBw/m5+efn/XQe6+dvfL0m+Y4nVID02jxl5YOP7TqCtPfvW1cICzMAXpAvaJSvWD3L68o/vXW8aOypLlMA9NimVHpD/jP//0KluHDVk6hzOnMXW4Ee/ZWokUEFnzzHKr3e7tfBO3+5r9KnnOUx3P6cg7PzZEW2ucyjYFAYEfnW/AvH+Qb842WUkvGrG+euFz6820DrDoejzeQNdcTsrYsNxr9+xs7cxesuuHPBimTaTAy/ZZAoPT8i49fFv769eU2Sh2LVcmxt3TOHJ1pn3u48/CrIw6LDEkqNVhQyTMCAfVD71xO24iqxsdZPN9wKGvm6GiWfZTBYHjPLR0JOIVpQiHTIDMGes8sdTgC6tJZq+7bsvkSnReJOJxy1lHe3gszb7551D60XsoMNDU5HGppmjAtzSmTMdVLz507E1D3Ovwvvjd04d1Loa+8TSRqqyovH+BUJ8iHIP0ZPJ9UvedM74iDKSTx0K5NZ2AxgaUjDsfulw9/dkmFra4GPIfDaWsTDUjXD8UN+HxSZkbTmSa1H+hpQqdMalGPjKj9/g1eR2ABw35p+GzEb2vjcNYPJCWVry+n1PgMllK1Y0/AkobwQqFT6oedwJw3Q60O+E/YP71MfHn5+PhRFoUn8xkM0J1+Y1qEL4PlWCwDWQbYcMYTQ5eEX5kN/LY2MkBVFbvuqK2uRuhD/chkknhZGhNe+5n70x0r/AELw35r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 1x, /project-BigStartTheory09/assets/modal-tomato-mob@2x-3e17380a.png 2x"
+              media="(max-width: 767px)"
+            />
+            <img
+              src="/project-BigStartTheory09/assets/modal-tomato-desk-3809fad9.png"
+              alt="photo cabbage basket"
+              width="243"
+            />
+          </picture>
+        </li>
+
+        <li class="form-item">
+          <div class="form-item-check">
+            <input
+              class="form-check visually-hidden"
+              type="checkbox"
+              name="vegetabless"
+              id="vegetabless"
+              value="true"
+              required
+            />
+            <label class="check-label" for="vegetabless">
+              <svg class="check-icon" width="16" height="16">
+                <use href="/project-BigStartTheory09/assets/iconss-6c14b7d6.svg#icon-check"></use>
+              </svg>
+            </label>
+          </div>
+          <div class="form-item-primary">
+            <h2 class="form-item-title">Vegetables Basket</h2>
+            <p class="form-item-text">Plant</p>
+          </div>
+          <picture class="form-item-pic">
+            <source
+              srcset="/project-BigStartTheory09/assets/modal-vegetables-desk-efd0a117.png 1x, /project-BigStartTheory09/assets/modal-vegetables-desk@2x-5d0a2806.png 2x"
+              media="(min-width: 1280px)"
+            />
+            <source
+              srcset="/project-BigStartTheory09/assets/modal-vegetables-tab-483ea5ea.png 1x, /project-BigStartTheory09/assets/modal-vegetables-tab@2x-4a3d282f.png 2x"
+              media="(min-width: 768px)"
+            />
+            <source
+              srcset="/project-BigStartTheory09/assets/modal-vegetables-mob-bf506944.png 1x, /project-BigStartTheory09/assets/modal-vegetables-mob@2x-e8b90a25.png 2x"
+              media="(max-width: 767px)"
+            />
+            <img
+              src="/project-BigStartTheory09/assets/modal-vegetables-desk-efd0a117.png"
+              alt="photo cabbage basket"
+              width="243"
+            />
+          </picture>
+        </li>
+      </ul>
+
+      <div class="form-wrap">
+        <div class="form-field-submit">
+          <div class="form-field">
+            <label class="form-label">
+              <input
+                class="form-input"
+                type="text"
+                name="user-name"
+                placeholder="Enter full name..."
+                pattern="\w{3,20}"
+                required
+              />
+            </label>
+          </div>
+          <div class="form-field">
+            <label class="form-label">
+              <input
+                class="form-input"
+                type="email"
+                name="user-mail"
+                placeholder="Enter email..."
+                pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+                required
+              />
+            </label>
+          </div>
+          <div class="form-field">
+            <label class="form-label">
+              <input
+                class="form-input"
+                type="text"
+                name="user-card"
+                placeholder="Enter card.."
+                pattern="[0-9]{16}"
+                required
+              />
+            </label>
+          </div>
+          <div class="form-field-coment">
+            <label class="form-label">
+              <textarea
+                class="form-coment"
+                name="user-comment"
+                placeholder="Enter comments..."
+              ></textarea>
+            </label>
+          </div>
+        </div>
+        <button class="form-btn" type="submit">Submit</button>
+      </div>
+    </form>
+    <picture class="good-girl-pic">
+      <source
+        srcset="/project-BigStartTheory09/assets/modal-girl-desk-d19d5490.png 1x, /project-BigStartTheory09/assets/modal-girl-desk@2x-e975c85c.png 2x"
+        media="(min-width: 1280px)"
+      />
+      <source
+        srcset="/project-BigStartTheory09/assets/modal-girl-tab-d63bffa6.png 1x, /project-BigStartTheory09/assets/modal-girl-tab@2x-62c3bb1c.png 2x"
+        media="(min-width: 768px)"
+      />
+      <img
+        src="/project-BigStartTheory09/assets/modal-girl-tab-d63bffa6.png"
+        alt="photo cabbage basket"
+      />
+    </picture>
+  </div>
+</div>
+
+
+    <!-- Modal - Mobile menu -->
+    <div class="container-mobmenu js-menu-container" id="mobile-menu">
+    <div class="modal-mob" data-modal>
+      <div class="header-mobile-box header">
+        <nav class="header-navigations">
+          <a href="../index.html" class="header-logo-nav link">
+            <svg width="16" height="16" class="header-logo">
+            <use href="../img/iconss.svg#logo"></use>
+            <span class="header-text">veggieboost</span>
+            </a>
+        </nav>
+        
+         <div class="heder-btn">
+            <button type="button" class="modal-close js-close-menu">
+                <svg class="close-icon" width="24" height="24">
+                    <use href="/project-BigStartTheory09/assets/iconss-6c14b7d6.svg#close-btn-x"></use>
+                </svg>
+            </button>
+        </div>
+      </div>
+
+        <ul class="modal-mob-list list">
+            <li class="modal-mob-items"><a class="modal-mob-link link" href="">How It Works</a></li>
+            <li class="modal-mob-items"><a class="modal-mob-link link" href="">Vegetables</a></li>
+            <li class="modal-mob-items"><a class="modal-mob-link link" href="">Contacts</a></li>
+            <li class="modal-mob-items"><a class="modal-mob-link link" href="">
+                    <svg class="modal-mob-icon" width="20" height="20">
+                        <use href="/project-BigStartTheory09/assets/shopping-carttt-9ab6d0e0.svg#shopping-cartw"></use>
+                    </svg></a></li>
+        </ul>
+    </div>
+</div>
+
+
+    <script src="../modal-menu.js"></script>
+    <script src="../modal.js"></script>
     
   </body>
 </html>
