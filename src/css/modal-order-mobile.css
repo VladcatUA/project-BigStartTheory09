@@ -286,13 +286,13 @@
         width: 100%;
     }
 
-    
+
 }
 
 @media screen and (min-width: 1280px) {
-    .container {
+    /* .container {
         max-width: 766px;
-    }
+    }*/
 
     .modal {
         background: var(--basic-background-color);
