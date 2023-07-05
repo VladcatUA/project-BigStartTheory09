@@ -207,29 +207,31 @@
               ></textarea>
             </label>
           </div>
+          <button class="form-btn" type="submit">Submit</button>
         </div>
-        <button class="form-btn" type="submit">Submit</button>
+        <div class="good-girl-wrap">
+          <picture class="good-girl-pic">
+            <source
+              srcset="
+                ./img/desktop/modal/modal-girl-desk.png    1x,
+                ./img/desktop/modal/modal-girl-desk@2x.png 2x
+              "
+              media="(min-width: 1280px)"
+            />
+            <source
+              srcset="
+                ./img/tablet/modal/modal-girl-tab.png    1x,
+                ./img/tablet/modal/modal-girl-tab@2x.png 2x
+              "
+              media="(min-width: 768px)"
+            />
+            <img
+              src="./img/tablet/modal/modal-girl-tab.png"
+              alt="photo cabbage basket"
+            />
+          </picture>
+        </div>
       </div>
     </form>
-    <picture class="good-girl-pic">
-      <source
-        srcset="
-          ./img/desktop/modal/modal-girl-desk.png    1x,
-          ./img/desktop/modal/modal-girl-desk@2x.png 2x
-        "
-        media="(min-width: 1280px)"
-      />
-      <source
-        srcset="
-          ./img/tablet/modal/modal-girl-tab.png    1x,
-          ./img/tablet/modal/modal-girl-tab@2x.png 2x
-        "
-        media="(min-width: 768px)"
-      />
-      <img
-        src="./img/tablet/modal/modal-girl-tab.png"
-        alt="photo cabbage basket"
-      />
-    </picture>
   </div>
 </div>
