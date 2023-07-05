@@ -128,6 +128,11 @@
     align-items: center;
 }
 
+.hero-btn-main:hover,
+.hero-btn-main:focus {
+    background-color: var(--light-green);
+}
+
 .hero-button-shop {
     background-color: transparent;
     border-radius: 50%;
