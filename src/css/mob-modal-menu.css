@@ -1,7 +1,7 @@
 .container-mobmenu {
   display: flex;
   position: fixed;
-  overflow: scroll;
+  /*overflow: scroll;*/
   top: 0;
   left: 0;
   width: 100%;
