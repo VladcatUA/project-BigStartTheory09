@@ -61,7 +61,7 @@
 
 .modal-title {
     color: var(--black);
-    text-shadow: 0px 4px 70px 0px rgba(0, 0, 0, 0.10);
+    text-shadow: 0px 4px 70px rgba(0, 0, 0, 0.10);
     font-size: 28px;
     font-weight: 500;
     line-height: 1;
@@ -79,7 +79,6 @@
 
 .form-item {
     position: relative;
-    width: 295;
     height: 119px;
     border-radius: 20px;
     background-color: var(--old-lace);
