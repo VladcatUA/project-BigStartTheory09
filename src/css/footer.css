@@ -7,19 +7,6 @@
     flex-shrink: 0;
 }
 
-/* 
-.footer-veggieboost-container {
-    margin: 0 auto;
-
-    max-width: 335px;
-
-    display: flex;
-    flex-direction: column;
-    flex-shrink: inherit;
-
-} */
-
-
 /* 1 ---- footer logo and nav */
 .footer-veggieboost-logo {
     display: flex;
@@ -46,7 +33,7 @@
 }
 
 .footer-logo-icon {
-    padding: auto auto;
+    padding: 0 auto;
 }
 
 .footer-logo-link:hover .footer-logo-icon,
