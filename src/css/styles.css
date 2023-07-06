@@ -5,6 +5,9 @@
 /*header*/
 @import url('./header.css');
 
+/*Go top*/
+@import url('./go-top.css');
+
 /*main */
 /*Hero */
 @import url('./hero.css');
